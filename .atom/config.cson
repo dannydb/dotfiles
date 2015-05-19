@@ -14,29 +14,36 @@
       "monokai-syntax-for-one-dark"
     ]
   editor:
-    invisibles: {}
+    invisibles:
+      {}
     fontFamily: "Source Code Pro"
     tabLength: 4
     fontSize: 13
     showIndentGuide: true
-  pigments: {}
-  "markdown-preview": {}
-  minimap: {}
-  "tree-view": {}
+  pigments:
+    {}
+  "markdown-preview":
+    {}
+  minimap:
+    {}
+  "tree-view":
+    {}
   "block-cursor":
     primaryColor:
       red: 204
       green: 204
       blue: 204
       alpha: 1
-  "isotope-ui": {}
+  "isotope-ui":
+    {}
   "atom-beautify":
     _analyticsUserId: "fe2eca7e-2f2a-4cfb-89d7-891c3ca924fe"
     css_newline_between_rules: true
     css_preserve_newlines: true
     css_selector_separator_newline: true
     analytics: false
-  "autocomplete-plus": {}
+  "autocomplete-plus":
+    suggestionListFollows: "Cursor"
 ".gfm.source":
   editor:
     preferredLineLength: 65
