@@ -10,8 +10,8 @@ alias ls="command ls -G"
 export LSCOLORS='Gxfxcxdxdxegedabagacad'
 
 # Set Atom as default editor
-export EDITOR="atom -w"
-export GIT_EDITOR="atom -w"
+export EDITOR="atom -nw"
+export GIT_EDITOR="atom -nw"
 
 # source congi bash files, like aliases, colors, base theme
 HELPERS="${DOTFILES}/*.bash"
