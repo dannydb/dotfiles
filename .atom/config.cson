@@ -1,49 +1,16 @@
 "*":
   "exception-reporting":
-    userId: "14a919a0-c86f-80be-7cc8-715bb96ee073"
+    userId: "de84f68a-e883-fe1d-5e6d-a6bffa0ce707"
   welcome:
     showOnStartup: false
   core:
-    projectHome: "/Users/ddebelius/Projects"
-    disabledPackages: [
-      "metrics"
-      "markdown-preview"
-    ]
     themes: [
       "one-dark-ui"
-      "monokai-syntax-for-one-dark"
+      "monokai"
     ]
+    followSymlinks: false
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     fontFamily: "Source Code Pro"
-    tabLength: 4
-    fontSize: 13
     showIndentGuide: true
-  pigments:
-    {}
-  "markdown-preview":
-    {}
-  minimap:
-    {}
-  "tree-view":
-    {}
-  "block-cursor":
-    primaryColor:
-      red: 204
-      green: 204
-      blue: 204
-      alpha: 1
-  "isotope-ui":
-    {}
-  "atom-beautify":
-    _analyticsUserId: "fe2eca7e-2f2a-4cfb-89d7-891c3ca924fe"
-    css_newline_between_rules: true
-    css_preserve_newlines: true
-    css_selector_separator_newline: true
-    analytics: false
-  "autocomplete-plus":
-    suggestionListFollows: "Cursor"
-".gfm.source":
-  editor:
-    preferredLineLength: 65
+  "one-dark-ui": {}
