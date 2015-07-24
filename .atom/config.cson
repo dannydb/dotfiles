@@ -9,8 +9,18 @@
       "monokai"
     ]
     followSymlinks: false
+    disabledPackages: [
+      "metrics"
+    ]
+    projectHome: "~/Projects"
   editor:
     invisibles: {}
     fontFamily: "Source Code Pro"
     showIndentGuide: true
   "one-dark-ui": {}
+  "atom-beautify":
+    analytics: false
+    css_newline_between_rules: true
+    css_preserve_newlines: true
+    css_selector_separator_newline: true
+  "atom-alignment": {}
