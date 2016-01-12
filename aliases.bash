@@ -98,3 +98,6 @@ alias tab="osascript ~/Projects/dotfiles/applescript/iterm_project_tab.scpt"
 
 # Open a new iTerm tab to work on dailygraphics with panes for dev server, dailygraphics fab/git and graphics git
 alias graphics="osascript ~/Projects/dotfiles/applescript/iterm_dailygraphics.scpt"
+
+# Reset bluetooth server
+alias fixbluetooth="sudo killall blued"
