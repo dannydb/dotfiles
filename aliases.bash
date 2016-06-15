@@ -19,6 +19,9 @@ alias glog="git log --format='%Cgreen%h%Creset %Cblue%ad%Creset %C(cyan)%an%Cres
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
+# Vim
+alias vim='mvim -v'
+
 # output current git branch, echo $(curbr)
 function curbr() {
   git rev-parse --abbrev-ref HEAD
