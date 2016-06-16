@@ -14,24 +14,25 @@ set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-scripts/The-NERD-tree'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
-Plugin 'valloric/youcompleteme'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'yggdroot/indentline'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'crusoexia/vim-monokai'
+Plugin 'yggdroot/indentline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-surround'
+Plugin 'bronson/vim-trailing-whitespace'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,7 +50,7 @@ filetype plugin indent on
 
 set autoindent " Copy indent from last line when starting new line
 set background=dark
-set cursorline " Highlight current line
+"set cursorline " Highlight current line
 set encoding=utf-8 nobomb " BOM often causes trouble
 set expandtab " Expand tabs to spaces
 set foldcolumn=0 " Column to show folds
@@ -88,11 +89,14 @@ set ttymouse=xterm " Set mouse type to xterm
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
 
 " Move a line of text using ALT+[jk]
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-" source: http://amix.dk/vim/vimrc.html
+nnoremap <C-Down> :m .+1<CR>==
+nnoremap <C-Up> :m .-2<CR>==
+
+inoremap <C-Down> <Esc>:m .+1<CR>==gi
+inoremap <C-Up> <Esc>:m .-2<CR>==gi
+
+vnoremap <C-Down> :m '>+1<CR>gv=gv
+vnoremap <C-Up> :m '<-2<CR>gv=gv
 
 nnoremap <leader>bs :CtrlPBuffer<CR>
 map <Leader>, <C-^>
@@ -101,7 +105,12 @@ map gb :bnext<CR>
 map gB :bprev<CR>
 
 syntax on
-colorscheme monokai 
+colorscheme monokai
+
+" CtrlP {{{1
+let g:ctrlp_show_hidden = 1
+" }}}
+
 
 " vim-airline {{{1
 let g:airline_powerline_fonts = 1
