@@ -7,7 +7,6 @@ packages: [
   "change-case"
   "color-picker"
   "cssbeautify"
-  "dd-one-dark-syntax"
   "docblockr"
   "emmet"
   "esformatter"
