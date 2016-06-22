@@ -17,6 +17,7 @@ git-plus@5.15.0
 git-time-machine@1.5.3
 language-applescript@0.2.2
 language-javascript-jsx@0.3.7
+language-viml@1.0.0
 merge-conflicts@1.4.4
 minimap@4.24.6
 monokai@0.18.0
