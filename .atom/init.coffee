@@ -9,3 +9,7 @@
 # atom.workspace.observeTextEditors (editor) ->
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
+
+process.nextTick ->
+  atom.workspace.getPaneItems().forEach ->
+    atom.workspace.destroyActivePaneItem()

@@ -16,13 +16,25 @@
  */
 
  * {
-     font-family: 'SFNS Display', 'Helvetica Neue', 'Lucida Grande', 'Segoe UI', sans-serif;
      font-size: 12px;
  }
 
 // style the background color of the tree view
 .tree-view {
   // background-color: whitesmoke;
+}
+
+.editor {
+  font-family: "SFMono-Medium";
+}
+
+atom-text-editor::shadow {
+  .support.class,
+  .support.type,
+  .storage.type,
+  .variable.parameter {
+    font-family: "SFMono-MediumItalic" !important;
+  }
 }
 
 // style the background and foreground colors on the atom-text-editor-element itself
