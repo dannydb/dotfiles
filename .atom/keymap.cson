@@ -27,10 +27,10 @@
 # For OS X
 '.platform-darwin':
   # Pane movement
-  'cmd-k cmd-h':  'window:focus-pane-on-left'
-  'cmd-k cmd-l':  'window:focus-pane-on-right'
-  'cmd-k cmd-k':  'window:focus-pane-above'
-  'cmd-k cmd-j':  'window:focus-pane-below'
+  'cmd-k f h':  'window:focus-pane-on-left'
+  'cmd-k f l':  'window:focus-pane-on-right'
+  'cmd-k f k':  'window:focus-pane-above'
+  'cmd-k f j':  'window:focus-pane-below'
 
   # Create an empty split pane
   'cmd-k h':  'pane:split-left'
