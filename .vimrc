@@ -19,6 +19,7 @@ Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rcabralc/monokai-airline.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-fugitive'
@@ -83,6 +84,7 @@ set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=2 " Always show tab bar
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters
 set smarttab " At start of line, <Tab> inserts shiftwidth spaces, <Bs> deletes shiftwidth spaces
+
 set softtabstop=2 " Tab key results in 2 space
 set title " Show the filename in the window titlebar
 set ttymouse=xterm " Set mouse type to xterm
@@ -111,10 +113,15 @@ colorscheme monokai
 let g:ctrlp_show_hidden = 1
 " }}}
 
+" vim-monokai {{{
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
+" }}}
+
 
 " vim-airline {{{1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'monokai'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 " }}}
@@ -129,6 +136,15 @@ map <Leader>s :NERDTreeToggle<CR>
 " }}}
 
 " indentLine  {{{
-let g:indentLine_color_dark = 1
 let g:indentLine_char = '┆'
+
+" Vim
+let g:indentLine_color_term = 239
+
+" GVim
+"let g:indentLine_color_gui = '#A4E57E'
+
+" none X terminal
+let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
 " }}}

@@ -139,6 +139,11 @@ pman () {
     man -t "${1}" | open -f -a /Applications/Preview.app
 }
 
+function command_exists ()
+{
+    type "$1" &> /dev/null ;
+}
+
 # Add reminder to Reminders.app (OS X 10.8)
 # Usage: `remind 'foo'` or `echo 'foo' | remind`
 # credit: @addyosmani

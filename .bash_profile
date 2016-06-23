@@ -9,7 +9,7 @@ unset MAILCHECK
 alias ls="command ls -G"
 export LSCOLORS='Gxfxcxdxdxegedabagacad'
 
-# Set Atom as default editor
+# Set vim as default editor
 export EDITOR="vim"
 export GIT_EDITOR="vim"
 
