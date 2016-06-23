@@ -1,5 +1,10 @@
 storage
 compile-cache
+blob-store
+packages
 dev
+themes
+.apm
 .npm
 .node-gyp
+.storage
