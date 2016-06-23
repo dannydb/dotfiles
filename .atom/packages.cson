@@ -10,7 +10,6 @@ packages: [
   "docblockr"
   "emmet"
   "esformatter"
-  "expose"
   "file-icons"
   "git-control"
   "git-plus"

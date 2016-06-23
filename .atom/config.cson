@@ -5,6 +5,8 @@
     css_newline_between_rules: true
     css_preserve_newlines: true
     css_selector_separator_newline: true
+  "color-picker":
+    triggerKey: "E"
   core:
     customFileTypes:
       "source.jst.html": [
@@ -14,6 +16,9 @@
       "metrics"
     ]
     followSymlinks: false
+    packagesWithKeymapsDisabled: [
+      "color-picker"
+    ]
     projectHome: "~/Projects"
     themes: [
       "one-dark-ui"
