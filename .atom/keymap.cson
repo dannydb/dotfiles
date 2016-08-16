@@ -57,3 +57,107 @@
   'cmd-ctrl-shift-j':  'window:move-active-item-to-pane-below'
 
   'cmd-ctrl-c': 'color-picker:open'
+
+# vim-mode-plus
+'atom-workspace:not([mini])':
+  'ctrl--': 'choose-pane:start'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  '-': 'choose-pane:start'
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+  # toggle-setting: t
+  # -------------------------
+  'space t i': 'user:toggle-show-invisible'
+  'space t I': 'editor:toggle-indent-guide'
+  'space t w': 'editor:toggle-soft-wrap'
+  'space t n': 'editor:toggle-line-numbers'
+
+  # surround: ys
+  # -------------------------
+  'S': 'vim-mode-plus:surround-smart-word'
+  'd s': 'vim-mode-plus:delete-surround-any-pair'
+  'c s': 'vim-mode-plus:change-surround-any-pair'
+  'y s': 'vim-mode-plus:surround'
+  'y s w': 'vim-mode-plus:surround-word'
+  'y s m': 'vim-mode-plus:map-surround'
+
+  # transform-string: s
+  # -------------------------
+  'space s ~': 'vim-mode-plus:toggle-case'
+  'space s U': 'vim-mode-plus:upper-case'
+  'space s u': 'vim-mode-plus:lower-case'
+  'space s c': 'vim-mode-plus:camel-case'
+  'space s /': 'vim-mode-plus:toggle-line-comments'
+  'space s -': 'vim-mode-plus:dash-case'
+  'space s _': 'vim-mode-plus:snake-case'
+  'space s r': 'vim-mode-plus:reverse'
+  'space s j': 'vim-mode-plus:join-by-input-with-keeping-space'
+  'space s s': 'vim-mode-plus:split-string'
+
+'atom-text-editor.vim-mode-plus.insert-mode':
+  'ctrl-s': 'vim-mode-plus:surround-smart-word'
+  # 'ctrl-o': 'vim-mode-plus:activate-normal-mode-once'
+
+  'ctrl-i': 'cursor-history:prev'
+  'ctrl-o': 'cursor-history:prev'
+
+  'ctrl-cmd-c': 'keystroke:delete-current-word'
+  # 'j k': 'vim-mode-plus:activate-normal-mode' # jk to escape
+  'cmd-f': 'editor:move-to-end-of-word'
+  'cmd-b': 'editor:move-to-beginning-of-word'
+  'cmd-d': 'editor:delete-to-end-of-word'
+  'cmd-m': 'editor:select-word'
+  'ctrl-y': 'clip-history:paste'
+  'cmd-y': 'clip-history:paste-newer'
+  'ctrl-Y': 'clip-history:paste-last'
+  'ctrl-.': 'vim-mode-plus:insert-last-inserted'
+  'ctrl-{': 'vim-mode-plus:move-to-previous-fold-start'
+  'ctrl-}': 'vim-mode-plus:move-to-next-fold-start'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  'S': 'vim-mode-plus:surround'
+  'g I': 'vim-mode-plus:insert-at-start-of-target'
+  'I': 'vim-mode-plus:insert-at-start-of-target'
+  'space i': 'vim-mode-plus:insert-at-start-of-target'
+  'g A': 'vim-mode-plus:insert-at-end-of-target'
+  'A': 'vim-mode-plus:insert-at-end-of-target'
+
+  'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
+  'ctrl-k': 'vim-mode-plus-user:move-selected-text-up'
+  'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
+  'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
+  'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
+
+  'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
+  'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
+  'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
+  'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
+
+'.markdown-preview':
+  '-': 'choose-pane:start'
+  'j': 'core:move-down'
+  'k': 'core:move-up'
+
+# Tree-view navigation
+# -------------------------
+'.tree-view':
+  '-': 'choose-pane:start'
+  'g g': 'core:move-to-top'
+  'shift-g': 'core:move-to-bottom'
+  'ctrl-h': 'focus-pane-or-panel-on-left'
+  'ctrl-l': 'focus-pane-or-panel-on-right'
+
+'.platform-darwin .find-and-replace atom-text-editor':
+  'ctrl-j': 'focus-pane-or-panel-below'
+  'ctrl-k': 'focus-pane-or-panel-above'
+
+'.platform-darwin .project-find atom-text-editor':
+  'ctrl-j': 'focus-pane-or-panel-below'
+  'ctrl-k': 'focus-pane-or-panel-above'
+
+'.project-folder atom-text-editor[mini]':
+  'cmd-enter': 'project-folder:replace'
+
+'atom-text-editor#choose-pane-editor':
+  '-': 'choose-pane:last-focused'

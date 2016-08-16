@@ -4,6 +4,8 @@ custom/
 .atom/compile-cache
 .atom/packages
 .atom/storage
+.atom/git-time-machine
+.atom/split-diff
 sublime/GitHub.sublime-settings
 sublime/ColorPicker/
 sublime/Package Control.last-run

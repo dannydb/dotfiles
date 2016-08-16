@@ -14,6 +14,7 @@
       ]
     disabledPackages: [
       "metrics"
+      "vim-mode"
     ]
     followSymlinks: false
     packagesWithKeymapsDisabled: [
@@ -24,11 +25,13 @@
       "one-dark-ui"
       "monokai"
     ]
+  docblockr:
+    override_js_var: true
   editor:
     fontFamily: "SF Mono"
     fontSize: 13
     invisibles: {}
-    showIndentGuide: true
+    showInvisibles: true
   "exception-reporting":
     userId: "de84f68a-e883-fe1d-5e6d-a6bffa0ce707"
   "git-plus": {}
@@ -50,5 +53,6 @@
       fontFamily: "\"Source Code Pro\""
       theme: "red"
   "tree-view": {}
+  "vim-mode-plus": {}
   welcome:
     showOnStartup: false

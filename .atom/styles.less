@@ -56,3 +56,23 @@ atom-text-editor-minimap,
 atom-text-editor::shadow atom-text-editor-minimap {
     background: rgba(0,0,0,0.2);
 }
+
+.choose-pane {
+  color: white;
+  background: rgba(0,0,0,0.8);
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 75px;
+  text-align: center;
+  font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+  &.active {
+    color: rgb(64, 226, 153);
+  }
+  &.last-focused {
+    color: white; 
+    text-decoration: none;
+  }
+}
