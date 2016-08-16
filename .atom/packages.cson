@@ -4,6 +4,7 @@ packages: [
   "atom-beautify"
   "atom-jinja2"
   "autoclose-html"
+  "blame"
   "change-case"
   "choose-pane"
   "color-picker"
