@@ -24,6 +24,7 @@ packages: [
   "merge-conflicts"
   "minimap"
   "monokai"
+  "open-on-cgit"
   "package-sync"
   "pigments"
   "pretty-json"
@@ -32,4 +33,5 @@ packages: [
   "toggle-quotes"
   "vim-mode"
   "vim-mode-plus"
+  "vim-mode-plus-project-find-from-search"
 ]

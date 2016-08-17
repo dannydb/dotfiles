@@ -161,3 +161,6 @@
 
 'atom-text-editor#choose-pane-editor':
   '-': 'choose-pane:last-focused'
+
+'atom-text-editor.vim-mode-plus-search':
+  'cmd-enter': 'vim-mode-plus-user:project-find-from-search'

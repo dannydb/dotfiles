@@ -31,6 +31,7 @@
     fontFamily: "SF Mono"
     fontSize: 13
     invisibles: {}
+    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "de84f68a-e883-fe1d-5e6d-a6bffa0ce707"
