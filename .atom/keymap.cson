@@ -27,36 +27,43 @@
 # For OS X
 '.platform-darwin':
   # Pane movement
-  'cmd-k f h':  'window:focus-pane-on-left'
-  'cmd-k f l':  'window:focus-pane-on-right'
-  'cmd-k f k':  'window:focus-pane-above'
-  'cmd-k f j':  'window:focus-pane-below'
+  'ctrl-w h':  'window:focus-pane-on-left'
+  'ctrl-w l':  'window:focus-pane-on-right'
+  'ctrl-w k':  'window:focus-pane-above'
+  'ctrl-w j':  'window:focus-pane-below'
 
   # Create an empty split pane
-  'cmd-k h':  'pane:split-left'
-  'cmd-k l': 'pane:split-right'
-  'cmd-k k':    'pane:split-up'
-  'cmd-k j':  'pane:split-down'
+  'ctrl-w e h':  'pane:split-left'
+  'ctrl-w e l': 'pane:split-right'
+  'ctrl-w e k':    'pane:split-up'
+  'ctrl-w e j':  'pane:split-down'
 
   # Create a split pane with the current pane item moved into it
-  'cmd-k m h':  'pane:split-left-and-move-active-item'
-  'cmd-k m l': 'pane:split-right-and-move-active-item'
-  'cmd-k m k':    'pane:split-up-and-move-active-item'
-  'cmd-k m j':  'pane:split-down-and-move-active-item'
+  'ctrl-w s h':  'pane:split-left-and-move-active-item'
+  'ctrl-w s l': 'pane:split-right-and-move-active-item'
+  'ctrl-w s k':    'pane:split-up-and-move-active-item'
+  'ctrl-w s j':  'pane:split-down-and-move-active-item'
 
   # Create a split pane with the current pane item duplicated
-  'cmd-k d h':  'pane:split-left-and-copy-active-item'
-  'cmd-k d l': 'pane:split-right-and-copy-active-item'
-  'cmd-k d k':    'pane:split-up-and-copy-active-item'
-  'cmd-k d j':  'pane:split-down-and-copy-active-item'
+  'ctrl-w d h':  'pane:split-left-and-copy-active-item'
+  'ctrl-w d l': 'pane:split-right-and-copy-active-item'
+  'ctrl-w d k':    'pane:split-up-and-copy-active-item'
+  'ctrl-w d j':  'pane:split-down-and-copy-active-item'
 
   # Move the current pane item to the target split pane
-  'cmd-ctrl-shift-h':  'window:move-active-item-to-pane-on-left'
-  'cmd-ctrl-shift-l': 'window:move-active-item-to-pane-on-right'
-  'cmd-ctrl-shift-k':    'window:move-active-item-to-pane-above'
-  'cmd-ctrl-shift-j':  'window:move-active-item-to-pane-below'
+  'ctrl-w m h':  'window:move-active-item-to-pane-on-left'
+  'ctrl-w m l': 'window:move-active-item-to-pane-on-right'
+  'ctrl-w m k':    'window:move-active-item-to-pane-above'
+  'ctrl-w m j':  'window:move-active-item-to-pane-below'
 
   'cmd-ctrl-c': 'color-picker:open'
+
+  # Open my local config
+  'ctrl-cmd-e i': 'application:open-your-init-script'
+  'ctrl-cmd-e c': 'application:open-your-config'
+  'ctrl-cmd-e k': 'application:open-your-keymap'
+  'ctrl-cmd-e s': 'application:open-your-stylesheet'
+  'ctrl-cmd-e n': 'application:open-your-snippets'
 
 # vim-mode-plus
 'atom-workspace:not([mini])':
@@ -123,16 +130,16 @@
   'g A': 'vim-mode-plus:insert-at-end-of-target'
   'A': 'vim-mode-plus:insert-at-end-of-target'
 
-  'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
-  'ctrl-k': 'vim-mode-plus-user:move-selected-text-up'
-  'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
-  'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
-  'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
-
-  'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
-  'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
-  'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
-  'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
+  # 'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
+  # 'ctrl-k': 'vim-mode-plus-user:move-selected-text-up'
+  # 'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
+  # 'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
+  # 'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
+  #
+  # 'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
+  # 'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
+  # 'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
+  # 'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
 
 '.markdown-preview':
   '-': 'choose-pane:start'
