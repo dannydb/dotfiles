@@ -36,6 +36,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias cpd="pwd|pbcopy"
 alias cdc="cd $(pbpaste)"
+alias cdp="cd ~/Projects/preview-projects/"
 
 # programs
 alias slt='open -a "Sublime Text 2"'
@@ -79,7 +80,7 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+# alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"

@@ -1,10 +1,16 @@
 "*":
   "atom-alignment": {}
   "atom-beautify":
-    analytics: false
-    css_newline_between_rules: true
-    css_preserve_newlines: true
-    css_selector_separator_newline: true
+    css:
+      preserve_newlines: true
+      selector_separator_newline: true
+    general:
+      _analyticsUserId: "f483312a-77ad-410f-ba8c-67b4810d260d"
+      analytics: false
+    js:
+      indent_size: 2
+    less:
+      indent_size: 2
   "color-picker":
     triggerKey: "E"
   core:
@@ -15,12 +21,14 @@
     disabledPackages: [
       "metrics"
       "vim-mode"
+      "language-gfm"
     ]
     followSymlinks: false
     packagesWithKeymapsDisabled: [
       "color-picker"
     ]
     projectHome: "~/Projects"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "monokai"
@@ -29,19 +37,25 @@
     override_js_var: true
   editor:
     fontFamily: "SF Mono"
-    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "de84f68a-e883-fe1d-5e6d-a6bffa0ce707"
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "6de65896-355d-4fff-bc5a-e5578c6fbd76"
+  "markdown-writer":
+    fileExtension: ".md"
   minimap: {}
   "one-dark-ui": {}
   "package-sync":
     createOnChange: true
     forceOverwrite: true
-  pigments: {}
+  pigments:
+    dismissableReloadNotifications: false
+    notifyReloads: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
