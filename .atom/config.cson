@@ -11,6 +11,8 @@
       indent_size: 2
     less:
       indent_size: 2
+  "atom-ternjs":
+    useSnippets: true
   "color-picker":
     triggerKey: "E"
   core:
@@ -22,6 +24,8 @@
       "metrics"
       "vim-mode"
       "language-gfm"
+      "markdown-scroll-sync"
+      "atom-ternjs"
     ]
     followSymlinks: false
     packagesWithKeymapsDisabled: [

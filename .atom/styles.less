@@ -15,9 +15,9 @@
  * (To see them, uncomment and save)
  */
 
- * {
-     font-size: 12px;
- }
+ // * {
+ //     font-size: 12px;
+ // }
 
 // style the background color of the tree view
 .tree-view {
@@ -28,11 +28,8 @@
   font-family: "SFMono-Medium";
 }
 
-atom-text-editor::shadow {
-  .support.class,
-  .support.type,
-  .storage.type,
-  .variable.parameter {
+atom-text-editor {
+  .syntax--property-name {
     font-family: "SFMono-MediumItalic" !important;
   }
 }
@@ -44,7 +41,7 @@ atom-text-editor {
 }
 
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
-atom-text-editor::shadow .cursor {
+atom-text-editor .cursor {
   // border-color: red;
 }
 
@@ -53,7 +50,7 @@ atom-text-editor::shadow .cursor {
 }
 
 atom-text-editor-minimap,
-atom-text-editor::shadow atom-text-editor-minimap {
+atom-text-editor atom-text-editor-minimap {
     background: rgba(0,0,0,0.2);
 }
 
