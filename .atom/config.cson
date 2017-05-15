@@ -37,6 +37,7 @@
       "one-dark-ui"
       "monokai"
     ]
+    titleBar: "custom"
   docblockr:
     override_js_var: true
   editor:
@@ -50,6 +51,9 @@
   "git-plus":
     general:
       _analyticsUserId: "6de65896-355d-4fff-bc5a-e5578c6fbd76"
+  "highlight-line": {}
+  "markdown-preview":
+    useGitHubStyle: true
   "markdown-writer":
     fileExtension: ".md"
   minimap: {}

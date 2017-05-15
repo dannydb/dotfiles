@@ -13,8 +13,7 @@ export LSCOLORS='Gxfxcxdxdxegedabagacad'
 export EDITOR="vim"
 export GIT_EDITOR="vim"
 
-
-# source congi bash files, like aliases, colors, base theme
+# source config bash files, like aliases, colors, base theme
 HELPERS="${DOTFILES}/*.bash"
 for config_file in $HELPERS
 do

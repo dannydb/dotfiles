@@ -20,6 +20,7 @@ packages: [
   "git-plus"
   "git-time-machine"
   "highlight-line"
+  "json-path-finder"
   "language-applescript"
   "language-javascript-jsx"
   "language-markdown"

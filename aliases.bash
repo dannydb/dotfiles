@@ -7,6 +7,8 @@ alias reload='source ~/.bash_profile'
 alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
+alias sleepstate="ioreg -n IODisplayWrangler | grep -i IOPowerManagement | perl -pe 's/^.*DevicePowerState\"=([0-9]+).*$/\1/'"
+
 # Git
 alias g='git'
 alias gp='git push'
@@ -18,6 +20,13 @@ alias gs='git status -sb'
 alias glog="git log --format='%Cgreen%h%Creset %Cblue%ad%Creset %C(cyan)%an%Creset: %s' --graph --date=short"
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
+
+# Preview
+alias p='preview'
+alias pc='preview clone'
+alias pp='preview publish'
+alias pr='preview republish'
+alias pc='preview create'
 
 # Vim
 alias vim='mvim -v'
