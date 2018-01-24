@@ -7,7 +7,6 @@ brew upgrade
 brew update
 
 brew install ack
-brew install caskroom/cask/brew-cask
 brew install ffmpeg
 brew install gdal --with-postgres
 brew install giflib
@@ -20,7 +19,8 @@ brew install libpng
 brew install mpg123
 brew install postgis
 brew install postgresql
-brew install python
+brew install python3
+brew install pyenv
 brew install node
 brew install rbenv
 brew install ruby-build
@@ -28,17 +28,17 @@ brew install sqlite
 brew install tig
 brew install webkit2png
 
-brew tap caskroom/cask-versions
+brew tap caskroom/cask
 
 # install all the things
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install firefox
-brew cask install sublime-text3
+brew cask install visual-studio-code 
 brew cask install airdisplay
 brew cask install airfoil
 brew cask install alfred
-brew cask install audacity
+# brew cask install audacity
 brew cask install bartender
 brew cask install choosy
 brew cask install droplr
@@ -49,12 +49,14 @@ brew cask install heroku-toolbelt
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install linein
-brew cask install onepassword
+brew cask install 1password
 brew cask install dropbox
-brew cask install rdio
-brew cask install hipchat
+brew cask install powermate
+
+# brew cask install rdio
+# brew cask install hipchat
 brew cask install colorpicker-skalacolor
-brew cask install tilemill
+# brew cask install tilemill
 brew cask install virtualbox
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
 

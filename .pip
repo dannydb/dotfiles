@@ -5,3 +5,5 @@ sudo easy_install pip==1.5.6
 sudo pip install virtualenv virtualenvwrapper
 sudo pip install numpy
 pip install Pygments
+pip install glances
+pip install bottle

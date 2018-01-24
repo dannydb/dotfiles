@@ -10,7 +10,7 @@ alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false 
 alias sleepstate="ioreg -n IODisplayWrangler | grep -i IOPowerManagement | perl -pe 's/^.*DevicePowerState\"=([0-9]+).*$/\1/'"
 
 # Git
-alias g='git'
+# alias g='git'
 alias gp='git push'
 alias gl='git pull'
 alias gca='git commit -v -a'
@@ -23,6 +23,7 @@ alias undopush="git push -f origin HEAD^:master"
 
 # Preview
 alias p='preview'
+alias pb='preview --no-browser'
 alias pc='preview clone'
 alias pp='preview publish'
 alias pr='preview republish'
@@ -62,10 +63,10 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias l="ls -lh ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
+alias la="ls -lha ${colorflag}"
 
 
 # List only directories

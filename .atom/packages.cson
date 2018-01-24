@@ -23,6 +23,7 @@ packages: [
   "import-sf-mono"
   "json-path-finder"
   "language-applescript"
+  "language-babel"
   "language-javascript-jsx"
   "language-markdown"
   "language-viml"

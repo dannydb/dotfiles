@@ -26,6 +26,7 @@
       "language-gfm"
       "markdown-scroll-sync"
       "atom-ternjs"
+      "language-javascript-jsx"
     ]
     followSymlinks: false
     packagesWithKeymapsDisabled: [
@@ -41,7 +42,7 @@
   docblockr:
     override_js_var: true
   editor:
-    fontFamily: "SF Mono"
+    fontFamily: "SFMono-Regular"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
