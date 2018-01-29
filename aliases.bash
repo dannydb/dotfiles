@@ -119,4 +119,4 @@ alias graphics="osascript ~/Projects/dotfiles/applescript/iterm_dailygraphics.sc
 alias fixbluetooth="sudo killall blued"
 
 # cd to dotfiles and open editor
-alias dotfiles="cd ~/Projects/dotfiles/ && vscode ."
+alias dotfiles="cd ~/Projects/dotfiles/ && code ."
