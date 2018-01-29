@@ -117,3 +117,6 @@ alias graphics="osascript ~/Projects/dotfiles/applescript/iterm_dailygraphics.sc
 
 # Reset bluetooth server
 alias fixbluetooth="sudo killall blued"
+
+# cd to dotfiles and open editor
+alias dotfiles="cd ~/Projects/dotfiles/ && vscode ."
