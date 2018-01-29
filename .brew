@@ -19,8 +19,8 @@ brew install libpng
 brew install mpg123
 brew install postgis
 brew install postgresql
-brew install python3
 brew install pyenv
+brew install pyenv-virtualenvwrapper
 brew install node
 brew install rbenv
 brew install ruby-build
