@@ -48,6 +48,11 @@ alias cpd="pwd|pbcopy"
 alias cdc="cd $(pbpaste)"
 alias cdp="cd ~/Projects/preview-projects/"
 
+## empty directory of all files and directories, including 
+## hidden files
+## https://unix.stackexchange.com/questions/77127/rm-rf-all-files-and-all-hidden-files-without-error
+alias empty='find . -name . -o -prune -exec rm -rf -- {} +'
+
 # programs
 alias slt='open -a "Sublime Text 2"'
 # also/or do this:
