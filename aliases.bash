@@ -29,6 +29,16 @@ alias pp='preview publish'
 alias pr='preview republish'
 alias pc='preview create'
 
+# PCO
+alias run-iphonese='react-native run-ios --simulator="iPhone SE"'
+alias run-iphone='react-native run-ios --simulator="iPhone 8"'
+alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus"'
+alias run-iphonex='react-native run-ios --simulator="iPhone X"'
+alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch)"'
+alias run-device='react-native run-ios --device'
+alias yarn-cache='yarn run start --reset-cache'
+alias clean-build="yarn && cd ios && pod install && cd .. && rm -rf /node_modules/react-native-camera/ios/FaceDetector && run-ios"
+
 # Vim
 alias vim='mvim -v'
 
