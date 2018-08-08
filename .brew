@@ -8,7 +8,7 @@ brew update
 
 brew install ack
 brew install ffmpeg
-brew install gdal --with-postgres
+# brew install gdal --with-postgres
 brew install giflib
 brew install git
 brew install ghi
@@ -17,7 +17,7 @@ brew install imagemagick
 brew install lame
 brew install libpng
 brew install mpg123
-brew install postgis
+# brew install postgis
 brew install postgresql
 brew install pyenv
 brew install pyenv-virtualenvwrapper
@@ -26,13 +26,14 @@ brew install rbenv
 brew install ruby-build
 brew install sqlite
 brew install tig
+brew install watchman
 brew install webkit2png
 
 brew tap caskroom/cask
 
 # install all the things
 brew cask install google-chrome
-brew cask install google-chrome-canary
+brew cask install homebrew/cask-versions/google-chrome-canary
 brew cask install firefox
 brew cask install safari-technology-preview
 brew cask install visual-studio-code 
@@ -44,7 +45,7 @@ brew cask install choosy
 brew cask install droplr
 brew cask install duet
 brew cask install fluid
-brew cask install flux
+# brew cask install flux
 brew cask install helium
 brew cask install heroku-toolbelt
 brew cask install istat-menus
