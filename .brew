@@ -11,11 +11,12 @@ brew install ffmpeg
 # brew install gdal --with-postgres
 brew install giflib
 brew install git
-brew install ghi
+# brew install ghi
 brew install grep
 brew install imagemagick
 brew install lame
 brew install libpng
+brew install macvim
 brew install mpg123
 # brew install postgis
 brew install postgresql
@@ -27,8 +28,9 @@ brew install ruby-build
 brew install sqlite
 brew install tig
 brew install watchman
-brew install webkit2png
+# brew install webkit2png
 brew install yarn
+
 
 brew tap caskroom/cask
 

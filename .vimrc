@@ -14,7 +14,6 @@ set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bling/vim-airline'
@@ -107,7 +106,7 @@ map gb :bnext<CR>
 map gB :bprev<CR>
 
 syntax on
-colorscheme monokai
+colorscheme monokai_pro 
 
 " CtrlP {{{1
 let g:ctrlp_show_hidden = 1
