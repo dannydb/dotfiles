@@ -60,5 +60,6 @@ brew cask install powermate
 brew cask install colorpicker-skalacolor
 brew cask install virtualbox
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+brew cask install react-native-debugger
 
 brew cleanup

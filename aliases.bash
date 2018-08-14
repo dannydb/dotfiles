@@ -20,7 +20,7 @@ alias gs='git status -sb'
 alias glog="git log --format='%Cgreen%h%Creset %Cblue%ad%Creset %C(cyan)%an%Creset: %s' --graph --date=short"
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
-# open conflicted files in VSCode
+# open conflicted files in VSCode.
 alias fix='code `git diff --name-only | uniq`'
 
 # Preview
