@@ -7,6 +7,7 @@ brew upgrade
 brew update
 
 brew install ack
+brew install cmake
 brew install ffmpeg
 # brew install gdal --with-postgres
 brew install giflib

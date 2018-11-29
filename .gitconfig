@@ -50,5 +50,6 @@
 	up = "!git remote update -p; git merge --ff-only @{u}"
 
 	# Open all modified files in my editor
-	wip = "!$EDITOR $(git ls-files -m)"
+	edit = "!$EDITOR $(git ls-files -m)"
+	code = "!code $(git ls-files -m)"
 

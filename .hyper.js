@@ -51,22 +51,22 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#000000',
-      red: '#ed3a2c',
-      green: '#b3e43a',
-      yellow: '#fea626',
-      blue: '#d0a4ff',
-      magenta: '#fe4386',
-      cyan: '#76e0f3',
-      white: '#f5f5f5',
-      lightBlack: '#686868',
-      lightRed: '#ff6e67',
-      lightGreen: '#5ffa68',
-      lightYellow: '#fffc67',
-      lightBlue: '#6871ff',
-      lightMagenta: '#ff77ff',
-      lightCyan: '#60fdff',
-      lightWhite: '#ffffff'
+      black: '#2D2A2E',
+      red: '#FF6188',
+      green: '#A9DC76',
+      yellow: '#FFD866',
+      blue: '#FC9867',
+      magenta: '#AB9DF2',
+      cyan: '#78DCE8',
+      white: '#FCFCFA',
+      lightBlack: '#2D2A2E',
+      lightRed: '#FF6188',
+      lightGreen: '#A9DC76',
+      lightYellow: '#FFD866',
+      lightBlue: '#FC9867',
+      lightMagenta: '#AB9DF2',
+      lightCyan: '#78DCE8',
+      lightWhite: '#FCFCFA'
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -124,7 +124,7 @@ module.exports = {
       },
       focusOnMouseHover: false
     },
-    workingDirectory: '~/Projects'
+    workingDirectory: '~/Code'
   },
 
   // a list of plugins to fetch and install from npm
@@ -138,10 +138,13 @@ module.exports = {
     "hypercwd",
     "hyperterm-summon",
     "hyper-pane",
+    "hyper-tabs-enhanced",
     "hyper-transparent-dynamic",
     "hyperminimal",
     "hyperterm-working-directory",
-    "hyperlinks"
+    "hyperlinks",
+    "hyper-statusline",
+    "hyper-vsplit-fix"
   ],
 
   // in development, you can create a directory under

@@ -40,7 +40,7 @@ ORANGE='\[\e[0;33m\]'
 
 DEFAULT_COLOR="${white}"
 
-USER_COLOR="${purple}"
+USER_COLOR="${red}"
 SUPERUSER_COLOR="${red}"
 MACHINE_COLOR=$ORANGE
 DIRECTORY_COLOR="${green}"
@@ -48,7 +48,7 @@ DIRECTORY_COLOR="${green}"
 VE_COLOR="${cyan}"
 RVM_COLOR="${cyan}"
 
-REF_COLOR="${purple}"
+REF_COLOR="${red}"
 
 # SCM prompts
 SCM_THEME_PROMPT_DIRTY=" ${bold_red}✗${normal}"
