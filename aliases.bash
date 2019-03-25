@@ -32,18 +32,22 @@ alias pr='preview republish'
 alias pc='preview create'
 
 # PCO
+alias run-android='react-native run-android'
+alias run-ios='run-iphonexs'
 alias run-iphonese='react-native run-ios --simulator="iPhone SE"'
 alias run-iphone='react-native run-ios --simulator="iPhone 8"'
 alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus"'
 alias run-iphonex='react-native run-ios --simulator="iPhone X"'
-alias run-iphonexr='react-native run-ios --simulator="iPhone XR"'
-alias run-iphonexs='react-native run-ios --simulator="iPhone XS"'
-alias run-iphonexs-max='react-native run-ios --simulator="iPhone XS Max"'
+alias run-iphonexr='react-native run-ios --simulator="iPhone Xʀ"'
+alias run-iphonexs='react-native run-ios --simulator="iPhone Xs"'
+alias run-iphonexs-max='react-native run-ios --simulator="iPhone Xs Max"'
 alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch)"'
 alias run-device='react-native run-ios --device'
 alias yarn-cache='yarn run start --reset-cache'
-alias clean-build="yarn && cd ios && pod install && cd .. && rm -rf /node_modules/react-native-camera/ios/FaceDetector && run-ios"
-
+alias clean-build="yarn && cd ios && pod install && cd .. && run-ios"
+alias cleaner-build="rm -rf node_modules && rm -rf ios/build && yarn && cd ios && pod install && cd ../android && ./gradlew clean && cd .."
+alias immersive-on="adb shell settings put global policy_control immersive.navigation=com.ministrycentered.churchcenter"
+alias immersive-off="adb shell settings put global policy_control immersive.off=com.ministrycentered.churchcenter"
 # Vim
 alias vim='mvim -v'
 
