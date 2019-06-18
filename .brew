@@ -37,6 +37,7 @@ brew install switchaudio-osx jq terminal-notifier
 brew tap caskroom/cask
 
 # install all the things
+brew cask install brave
 brew cask install google-chrome
 brew cask install homebrew/cask-versions/google-chrome-canary
 brew cask install firefox
@@ -51,12 +52,13 @@ brew cask install droplr
 brew cask install duet
 brew cask install fluid
 # brew cask install flux
-brew cask install helium
+# brew cask install helium
 brew cask install heroku-toolbelt
+brew cask install hyper
 brew cask install istat-menus
-brew cask install iterm2
+# brew cask install iterm2
 brew cask install linein
-brew cask install 1password
+# brew cask install 1password
 brew cask install dropbox
 brew cask install powermate
 brew cask install colorpicker-skalacolor
