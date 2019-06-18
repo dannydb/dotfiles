@@ -8,7 +8,8 @@ module.exports = {
     fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      '"IBM Plex Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     // cursorColor: 'rgba(248,28,229,0.8)',
@@ -45,7 +46,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    // padding: '12px 14px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -116,7 +117,8 @@ module.exports = {
       },
       showIndicators: false, // Show pane number
       indicatorPrefix: '^⌥', // Will be completed with pane number
-      indicatorStyle: { // Added to indicator <div>
+      indicatorStyle: {
+        // Added to indicator <div>
         position: 'absolute',
         top: 0,
         left: 0,
@@ -134,17 +136,19 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-import-sf-mono",
-    "hypercwd",
-    "hyperterm-summon",
-    "hyper-pane",
-    "hyper-tabs-enhanced",
-    "hyper-transparent-dynamic",
-    "hyperminimal",
-    "hyperterm-working-directory",
-    "hyperlinks",
-    "hyper-statusline",
-    "hyper-vsplit-fix"
+    // 'hyper-import-sf-mono',
+    'hypercwd',
+    'hyperterm-summon',
+    'hyper-pane',
+    'hyper-tabs-enhanced',
+    // 'hyper-transparent-dynamic',
+    'hyperminimal',
+    'hyperterm-working-directory',
+    'hyperlinks',
+    'hyper-statusline',
+    'hyper-vsplit-fix',
+    'hyper-synthwave84',
+    'hyper-fading-scrollbar'
   ],
 
   // in development, you can create a directory under
