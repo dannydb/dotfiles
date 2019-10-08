@@ -11,11 +11,11 @@ alias sleepstate="ioreg -n IODisplayWrangler | grep -i IOPowerManagement | perl 
 
 # Git
 # alias g='git'
-alias gp='git push'
-alias gl='git pull'
-alias gca='git commit -v -a'
-alias gco='git checkout'
-alias gs='git status -sb'
+# alias gp='git push'
+# alias gl='git pull'
+# alias gca='git commit -v -a'
+# alias gco='git checkout'
+# alias gs='git status -sb'
 # Lovely git log, thx @visionmedia
 alias glog="git log --format='%Cgreen%h%Creset %Cblue%ad%Creset %C(cyan)%an%Creset: %s' --graph --date=short"
 # Undo a `git push`
@@ -26,6 +26,7 @@ alias fix='code `git diff --name-only | uniq`'
 # Preview
 alias p='preview'
 alias pb='preview --no-browser'
+alias pl='preview --live'
 alias pc='preview clone'
 alias pp='preview publish'
 alias pr='preview republish'
@@ -33,15 +34,18 @@ alias pc='preview create'
 
 # PCO
 alias run-android='react-native run-android'
-alias run-ios='run-iphonexs'
-alias run-iphonese='react-native run-ios --simulator="iPhone SE"'
-alias run-iphone='react-native run-ios --simulator="iPhone 8"'
-alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus"'
-alias run-iphonex='react-native run-ios --simulator="iPhone X"'
-alias run-iphonexr='react-native run-ios --simulator="iPhone Xʀ"'
-alias run-iphonexs='react-native run-ios --simulator="iPhone Xs"'
-alias run-iphonexs-max='react-native run-ios --simulator="iPhone Xs Max"'
-alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch)"'
+alias run-ios='run-iphone11pro'
+alias run-iphone11='react-native run-ios --simulator="iPhone 11 (13.0)"'
+alias run-iphone11pro='react-native run-ios --simulator="iPhone 11 Pro (13.0)"'
+alias run-iphone11pro-max='react-native run-ios --simulator="iPhone 11 Pro Max (13.0)"'
+alias run-iphonese='react-native run-ios --simulator="iPhone SE (13.0)"'
+alias run-iphone='react-native run-ios --simulator="iPhone 8 (13.0)"'
+alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus (13.0)"'
+alias run-iphonex='react-native run-ios --simulator="iPhone X (13.0)"'
+alias run-iphonexr='react-native run-ios --simulator="iPhone Xʀ (13.0)"'
+alias run-iphonexs='react-native run-ios --simulator="iPhone Xs (13.0)"'
+alias run-iphonexs-max='react-native run-ios --simulator="iPhone Xs Max (13.0)"'
+alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch) (13.0)"'
 alias run-device='react-native run-ios --device'
 alias yarn-cache='yarn run start --reset-cache'
 alias clean-build="yarn && cd ios && pod install && cd .. && run-ios"
@@ -57,15 +61,15 @@ function curbr() {
 }
 
 # Easier navigation: .., ..., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
-alias cpd="pwd|pbcopy"
-alias cdc="cd $(pbpaste)"
-alias cdp="cd ~/Projects/preview-projects/"
+# alias ..="cd .."
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias .....="cd ../../../.."
+# alias ~="cd ~" # `cd` is probably faster to type though
+# alias -- -="cd -"
+# alias cpd="pwd|pbcopy"
+# alias cdc="cd $(pbpaste)"
+# alias cdp="cd ~/Projects/preview-projects/"
 
 ## empty directory of all files and directories, including 
 ## hidden files
@@ -143,4 +147,4 @@ alias graphics="osascript ~/Projects/dotfiles/applescript/iterm_dailygraphics.sc
 alias fixbluetooth="sudo killall blued"
 
 # cd to dotfiles and open editor
-alias dotfiles="cd ~/Projects/dotfiles/ && code ."
+alias config="cd ~/Code/dotfiles/ && code ."
