@@ -13,7 +13,7 @@ module.exports = {
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     // cursorColor: 'rgba(248,28,229,0.8)',
-    cursorColor: 'rgba(255,255,255,0.8)',
+    cursorColor: '#f825a4',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
@@ -22,13 +22,13 @@ module.exports = {
     cursorBlink: true,
 
     // color of the text
-    foregroundColor: '#fff',
+    foregroundColor: '#f2ebe0',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: '#261f32',
 
     // border color (window, tabs)
-    borderColor: 'rgba(90,90,90,0.5)',
+    borderColor: '#201b29',
 
     // custom css to embed in the main window
     css: '',
@@ -147,7 +147,7 @@ module.exports = {
     'hyperlinks',
     'hyper-statusline',
     'hyper-vsplit-fix',
-    'hyper-synthwave84',
+    // 'hyper-synthwave84',
     'hyper-fading-scrollbar'
   ],
 
