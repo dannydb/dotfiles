@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Reload Library
-alias reload='source ~/.bash_profile'
+alias reload='source ~/.zshrc'
 
 # Show/hide hidden files in Finder
 alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
