@@ -181,6 +181,29 @@ EOF
 
 # open last commit in GitHub, in the browser.
 # credit: @cowboy
+
+# GitHub URL for current repo.
+function gurl() {
+  local remotename="${@:-origin}"
+  local remote="$(git remote -v | awk '/^'"$remotename"'.*\(push\)$/ {print $2}')"
+  [[ "$remote" ]] || return
+  local host="$(echo "$remote" | perl -pe 's/.*@//;s/:.*//')"
+  local user_repo="$(echo "$remote" | perl -pe 's/.*://;s/\.git$//')"
+  echo "https://$host/$user_repo"
+}
+# GitHub URL for current repo, including current branch + path.
+alias gurlp='echo $(gurl)/tree/$(gbs)/$(git rev-parse --show-prefix)'
+
+# git log with per-commit cmd-clickable GitHub URLs (iTerm)
+function gf() {
+  git log $* --name-status --color | awk "$(cat <<AWK
+    /^.*commit [0-9a-f]{40}/ {sha=substr(\$2,1,7)}
+    /^[MA]\t/ {printf "%s\t$(gurl)/blob/%s/%s\n", \$1, sha, \$2; next}
+    /.*/ {print \$0}
+AWK
+  )" | less -F
+}
+
 function gfu() {
   local n="${@:-1}"
   n=$((n-1))
