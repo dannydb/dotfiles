@@ -9,7 +9,7 @@ module.exports = {
 
     // font family with optional fallbacks
     fontFamily:
-      '"IBM Plex Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"IBM Plex Mono", PowerlineSymbols, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     // cursorColor: 'rgba(248,28,229,0.8)',
@@ -60,7 +60,7 @@ module.exports = {
       magenta: '#AB9DF2',
       cyan: '#78DCE8',
       white: '#FCFCFA',
-      lightBlack: '#2D2A2E',
+      lightBlack: '#666',
       lightRed: '#FF6188',
       lightGreen: '#A9DC76',
       lightYellow: '#FFD866',

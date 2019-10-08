@@ -35,17 +35,17 @@ alias pc='preview create'
 # PCO
 alias run-android='react-native run-android'
 alias run-ios='run-iphone11pro'
-alias run-iphone11='react-native run-ios --simulator="iPhone 11 (13.0)"'
-alias run-iphone11pro='react-native run-ios --simulator="iPhone 11 Pro (13.0)"'
-alias run-iphone11pro-max='react-native run-ios --simulator="iPhone 11 Pro Max (13.0)"'
-alias run-iphonese='react-native run-ios --simulator="iPhone SE (13.0)"'
-alias run-iphone='react-native run-ios --simulator="iPhone 8 (13.0)"'
-alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus (13.0)"'
-alias run-iphonex='react-native run-ios --simulator="iPhone X (13.0)"'
-alias run-iphonexr='react-native run-ios --simulator="iPhone Xʀ (13.0)"'
-alias run-iphonexs='react-native run-ios --simulator="iPhone Xs (13.0)"'
-alias run-iphonexs-max='react-native run-ios --simulator="iPhone Xs Max (13.0)"'
-alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch) (13.0)"'
+alias run-iphone11='react-native run-ios --simulator="iPhone 11 (13.1)"'
+alias run-iphone11pro='react-native run-ios --simulator="iPhone 11 Pro (13.1)"'
+alias run-iphone11pro-max='react-native run-ios --simulator="iPhone 11 Pro Max (13.1)"'
+alias run-iphonese='react-native run-ios --simulator="iPhone SE (13.1)"'
+alias run-iphone='react-native run-ios --simulator="iPhone 8 (13.1)"'
+alias run-iphoneplus='react-native run-ios --simulator="iPhone 8 Plus (13.1)"'
+alias run-iphonex='react-native run-ios --simulator="iPhone X (13.1)"'
+alias run-iphonexr='react-native run-ios --simulator="iPhone Xʀ (13.1)"'
+alias run-iphonexs='react-native run-ios --simulator="iPhone Xs (13.1)"'
+alias run-iphonexs-max='react-native run-ios --simulator="iPhone Xs Max (13.1)"'
+alias run-ipad='react-native run-ios --simulator="iPad Pro (12.9-inch) (13.1)"'
 alias run-device='react-native run-ios --device'
 alias yarn-cache='yarn run start --reset-cache'
 alias clean-build="yarn && cd ios && pod install && cd .. && run-ios"
@@ -77,40 +77,40 @@ function curbr() {
 alias empty='find . -name . -o -prune -exec rm -rf -- {} +'
 
 # programs
-alias slt='open -a "Sublime Text 2"'
+# alias slt='open -a "Sublime Text 2"'
 # also/or do this:
 # ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
 # Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
-else # OS X `ls`
-	colorflag="-G"
-fi
+# if ls --color > /dev/null 2>&1; then # GNU `ls`
+# 	colorflag="--color"
+# else # OS X `ls`
+# 	colorflag="-G"
+# fi
 
 # List all files colorized in long format
-alias l="ls -lh ${colorflag}"
+# alias l="ls -lh ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -lha ${colorflag}"
+# alias la="ls -lha ${colorflag}"
 
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
 # Always use color output for `ls`
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-	alias ls="command ls -G"
-else
-	alias ls="command ls --color"
-	export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
-fi
+# if [[ "$OSTYPE" =~ ^darwin ]]; then
+# 	alias ls="command ls -G"
+# else
+# 	alias ls="command ls --color"
+# 	export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+# fi
 
 # `cat` with beautiful colors. requires Pygments installed.
 # 							   sudo easy_install Pygments
-alias c='pygmentize -O style=monokai -f console256 -g'
+# alias c='pygmentize -O style=monokai -f console256 -g'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
