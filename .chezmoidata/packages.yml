@@ -1,0 +1,57 @@
+packages:
+  darwin:
+    brews:
+      - 'git-lfs'
+      - 'mas'
+      - 'neovim'
+      - 'starship'
+      - 'tree-sitter'
+      - 'watchman'
+    casks:
+      - '1password'
+      - '1password-cli'
+      - 'bartender'
+      - 'android-studio'
+      - 'asana'
+      - 'notion'
+      - 'dash'
+      - 'fantastical'
+      - 'figma'
+      - 'obsidian'
+      - 'iterm2'
+      - 'imageoptim'
+      - 'istat-menus'
+      - 'arc'
+      - 'slack'
+      - 'rapidapi'
+      - 'reader'
+      - 'tableplus'
+      - 'raycast'
+      - 'soundsource'
+      - 'trailer'
+      - 'tuple'
+      - 'raindropio'
+      - 'flipper'
+      - 'font-monaspace'
+      - 'visual-studio-code'
+      - 'zulu11'
+      - 'zoom'
+    mas:
+      - 497799835 # Xcode
+      - 1287239339 # ColorSlurp
+      - 1365531024 # 1Blocker
+      - 1569813296 # 1Password for Safari
+      - 1290358394 # Cardhop
+      - 506189836 # Harvest
+      - 2145332318 # Ivory
+      - 1568924476 # Mela
+      - 1592917505 # Noir
+      - 1440405750 # MusicHarbor
+      - 1643649331 # OpenIn
+      - 639968404 # Parcel
+      - 1444636541 # Photomator
+      - 1289583905 # Pixelmator Pro
+      - 1606145041 # Sleeve
+      - 2144121543 # Spark
+      - 904280696 # Things
+      - 889428659 # xScope
