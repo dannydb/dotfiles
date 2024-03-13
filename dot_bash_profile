@@ -1,0 +1,47 @@
+#!/bin/bash
+
+export DOTFILES="$HOME/.local/share/chezmoi"
+
+PATH=/opt/homebrew/bin:$PATH:
+PATH=$PATH:/opt/homebrew/sbin:
+PATH=$PATH:$HOME/pco-box/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/local/share/npm/bin
+PATH=$PATH:/usr/local/bin/node_modules/.bin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/bin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/opt/X11/bin
+PATH=$PATH:$HOME/.cargo/bin
+
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+
+PATH=$PATH:$ANDROID_SDK_ROOT/tools
+PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+export PATH
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
+
+# enable colors
+alias ls="command ls -G"
+export LSCOLORS='Gxfxcxdxdxegedabagacad'
+
+# Set vim as default editor
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+
+# tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+eval "$(starship init bash)"

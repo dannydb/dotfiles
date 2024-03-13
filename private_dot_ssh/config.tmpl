@@ -1,0 +1,26 @@
+Include /Users/dannydb/.colima/ssh_config
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host pi
+  HostName raspberrypi.local
+  User pi
+
+Host hassio
+  HostName hassio.local
+  User root
+
+Host cloudbox
+  ForwardAgent yes
+  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+  User ubuntu
+
+Host {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+  ForwardAgent yes
+  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+  User ubuntu
+  

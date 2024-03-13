@@ -1,0 +1,65 @@
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[core]
+	quotepath = false
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile=~/.gitignore_global
+[color]
+	ui = true
+[color "branch"]
+	current = yellow black
+	local = yellow
+	remote = magenta
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red reverse
+	new = green reverse
+	whitespace = white reverse
+[color "status"]
+	added = yellow ul
+	changed = green
+	untracked = cyan reverse
+	branch = magenta bold
+[instaweb]
+	local = true
+	httpd = webrick
+[alias]
+	# show all branches, even across remotes
+	branches = branch -a --color -v
+
+	# Get short SHA-1 for object
+	hash = rev-parse --short HEAD
+
+	# Show the log with stats, but without merges
+	lc = log ORIG_HEAD.. --stat --no-merges
+
+	# See a tree graph of your git history
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# List files known to Git
+	ls = ls-files
+
+	# Show the branches I've been working on and when they were created
+	mybranches = "!f() { if test $# = 0 ; then set -- refs/remotes ; fi ; git for-each-ref --format='%(authordate:relative)\t%(refname:short)\t%(authoremail)' --sort=authordate \"$@\" | sed -ne \"s/\t<$(git config user.email)>//p\" | column -s '\t' -t ; } ; f"
+
+	# update all submodules in a project
+	subs = submodule foreach git pull origin master
+
+	# Pull all branches from the remote that can be merged with fast-forward
+	up = "!git remote update -p; git merge --ff-only @{u}"
+
+	# Open all modified files in my editor
+	edit = "!$EDITOR $(git ls-files -m)"
+	code = "!code $(git ls-files -m)"
+
+[commit]
+	template = "~/.gitmessage"
+[user]
+	name = {{ onepasswordRead "op://chezmoi/Git Author/name" }}
+	email = {{ onepasswordRead "op://chezmoi/Git Author/email" }}
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
