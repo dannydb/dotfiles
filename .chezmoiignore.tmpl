@@ -1,0 +1,15 @@
+.oh-my-zsh/cache/**
+.DS_Store
+README.md
+zsh/
+install.sh
+
+
+{{ if ne .chezmoi.os "darwin" }}
+.chezmoiscripts/darwin/**
+.ssh/config
+{{ end }}
+
+{{ if ne .chezmoi.os "linux" }}
+.chezmoiscripts/linux/**
+{{ end }}
