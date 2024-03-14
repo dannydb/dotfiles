@@ -71,6 +71,8 @@ export ARTIFACTORY_AUTH=$(echo -n "$ARTIFACTORY_USER:$(echo $ARTIFACTORY_API_KEY
 
 export NYT_USER={{ onepasswordRead "op://chezmoi/NYT User/user" }}
 export NYT_EMAIL={{ onepasswordRead "op://chezmoi/NYT User/email" }}
+
+export PCO_CLOUDBOX_AFTER_PROVISION_SCRIPT_PATH=$DOTFILES/cloud-box-post-provision.sh
 {{- end }}
 
 eval "$(starship init zsh)"
