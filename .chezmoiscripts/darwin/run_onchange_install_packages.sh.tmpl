@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
 # Check for Homebrew and install if we don't have it
@@ -19,4 +20,5 @@ cask {{ . | quote }}
 EOF
 {{ range .packages.darwin.mas -}}
 mas install {{ . }}
+{{ end -}}
 {{ end -}}

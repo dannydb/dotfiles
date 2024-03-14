@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 
 set -eu
@@ -17,3 +18,4 @@ curl -sS https://starship.rs/install.sh | sh
 if ! command -v nvim >/dev/null; then
   sudo apt install neovim
 fi
+{{ end -}}
