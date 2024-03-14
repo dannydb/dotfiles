@@ -3,7 +3,6 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
-
 # find shorthand
 function f() {
     find . -name "$1"
@@ -36,12 +35,10 @@ AWK
   )" | less -F
 }
 
-
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
-
 
 # Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
 # Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
@@ -122,17 +119,6 @@ function time_since_last_commit() {
   git log -1 --pretty=format:"%ar" | sed 's/\([0-9]*\) \(.\).*/\1\2/'
 }
 
-# wrap git 
-# https://wynnnetherland.com/journal/extending-the-command-line/
-# function g {
-#   if [[ $# > 0 ]]; then
-#     git "$@"
-#   else
-#     echo "Last commit: $(time_since_last_commit) ago"
-#     git status --short --branch
-#   fi
-# }
-
 # Sometimes yosemite crashes with a gunicorn server up
 # and when it comes back up there is a python process blocking port 8000
 # kill that process with this function
@@ -159,28 +145,6 @@ function command_exists ()
 {
     type "$1" &> /dev/null ;
 }
-
-# Add reminder to Reminders.app (OS X 10.8)
-# Usage: `remind 'foo'` or `echo 'foo' | remind`
-# credit: @addyosmani
-function remind() {
-        local text
-        if [ -t 0 ]; then
-                text="$1" # argument
-        else
-                text=$(cat) # pipe
-        fi
-        osascript >/dev/null <<EOF
-tell application "Reminders"
-        tell the default list
-                make new reminder with properties {name:"$text"}
-        end tell
-end tell
-EOF
-}
-
-# open last commit in GitHub, in the browser.
-# credit: @cowboy
 
 # GitHub URL for current repo.
 function gurl() {

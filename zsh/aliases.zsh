@@ -1,13 +1,8 @@
 # Reload Library
 alias reload='source ~/.zshrc'
 
+# Chezmoi
 alias cm='chezmoi'
-
-# Show/hide hidden files in Finder
-alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
-
-alias sleepstate="ioreg -n IODisplayWrangler | grep -i IOPowerManagement | perl -pe 's/^.*DevicePowerState\"=([0-9]+).*$/\1/'"
 
 # Git
 alias gs='gst'
@@ -54,19 +49,6 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Install project requirements
-alias installreq="pip install -r requirements.txt; npm install; fab update"
-
-# Open a new iTerm tab with panes for dev server and fab/git commands
-alias tab="osascript ~/Projects/dotfiles/applescript/iterm_project_tab.scpt"
-
-# Open a new iTerm tab to work on dailygraphics with panes for dev server, dailygraphics fab/git and graphics git
-alias graphics="osascript ~/Projects/dotfiles/applescript/iterm_dailygraphics.scpt"
 
 # Reset bluetooth server
 alias fixbluetooth="sudo killall blued"
