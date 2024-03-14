@@ -18,4 +18,5 @@ brew {{ . | quote }}
 {{ end -}}
 EOF
 
+command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
