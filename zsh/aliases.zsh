@@ -1,6 +1,8 @@
 # Reload Library
 alias reload='source ~/.zshrc'
 
+alias cm='chezmoi'
+
 # Show/hide hidden files in Finder
 alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
