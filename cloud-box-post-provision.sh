@@ -6,11 +6,9 @@ cd /home/ubuntu/Code
 git clone git@github.com:planningcenter/tapestry-react.git
 git clone git@github.com:planningcenter/doxy-web.git
 
-if [ ! "$(command -v pkgx)" ]; then
-	curl -Ssf https://pkgx.sh | sh
-else
-    echo "pkgx already installed."
-fi
+curl -Ssf https://pkgx.sh | sh
 
-pkgx chezmoi init dannydb --apply
+echo "Installing zsh"
+sudo apt install -y zsh
+sudo chsh $(whoami) -s /usr/bin/zsh
 

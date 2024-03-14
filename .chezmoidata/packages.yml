@@ -2,7 +2,6 @@ packages:
   linux:
     brews:
       - 'chezmoi'
-      - 'zsh'
       - 'neovim'
       - 'starship'
   darwin:
