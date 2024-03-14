@@ -2,7 +2,7 @@
 
 set -e # -e: exit on error
 
-cd /home/Ubuntu/Code
+cd /home/ubuntu/Code
 git clone git@github.com:planningcenter/tapestry-react.git
 git clone git@github.com:planningcenter/doxy-web.git
 
