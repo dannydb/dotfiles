@@ -17,3 +17,5 @@ brew bundle --no-lock --file=/dev/stdin <<EOF
 brew {{ . | quote }}
 {{ end -}}
 EOF
+
+sudo chsh -s $(which zsh)
