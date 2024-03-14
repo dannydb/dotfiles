@@ -60,7 +60,12 @@ export TERM=xterm-256color # or screen-256color
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PGDATA=/usr/local/var/postgres
+{{- if eq .chezmoi.os "darwin" }}
+export EDITOR="code"
+{{- end }}
+{{- if eq .chezmoi.os "linux" }}
 export EDITOR="nvim"
+{{- end }}
 export GIT_EDITOR="nvim"
 
 {{- if eq .chezmoi.os "darwin" }}
