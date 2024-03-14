@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 Include /Users/dannydb/.colima/ssh_config
 
 Host *
@@ -23,4 +24,4 @@ Host {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
   ForwardAgent yes
   HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
   User ubuntu
-  
+{{ end -}}
