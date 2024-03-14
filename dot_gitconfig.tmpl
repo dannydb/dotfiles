@@ -56,8 +56,8 @@
 [commit]
 	template = "~/.gitmessage"
 [user]
-	name = {{ onepasswordRead "op://chezmoi/Git Author/name" }}
-	email = {{ onepasswordRead "op://chezmoi/Git Author/email" }}
+	name = {{ .name | quote }}
+	email = {{ .email | quote }}
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
