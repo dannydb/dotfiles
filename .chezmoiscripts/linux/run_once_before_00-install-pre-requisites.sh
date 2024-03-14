@@ -2,18 +2,17 @@
 
 set -eu
 
-sudo apt update
-
-# Install zsh if it's not already installed
-if ! command -v zsh >/dev/null; then
-  sudo apt install zsh
-  chsh -s $(which zsh)
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else 
+	echo "Homebrew already installed."
 fi
 
-# Install starship prompt
-curl -sS https://starship.rs/install.sh | sh
+brew update
 
-# Install nvim if it's not already installed
-if ! command -v nvim >/dev/null; then
-  sudo apt install neovim
-fi
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range .packages.linux.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+EOF
