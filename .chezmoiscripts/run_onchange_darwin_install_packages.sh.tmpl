@@ -1,6 +1,15 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else 
+	echo "Homebrew already installed."
+fi
+
+brew update
+
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
@@ -10,6 +19,6 @@ cask {{ . | quote }}
 {{ end -}}
 EOF
 {{ range .packages.darwin.mas -}}
-mas {{ . }}
+mas install {{ . }}
 {{ end -}}
 {{ end -}}
