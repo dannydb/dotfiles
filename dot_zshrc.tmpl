@@ -32,10 +32,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)";
 
 plugins=(
   asdf
-  git
+  brew
   bundler
   colored-man-pages
   colorize
+  git
   macos
   pipenv
   rbenv
@@ -46,6 +47,8 @@ plugins=(
 )
 
 eval "$($HOME/Code/pco/bin/pco init -)"
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $HOME/pco-box/env.sh
 . $ZSH/oh-my-zsh.sh

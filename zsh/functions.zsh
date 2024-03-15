@@ -3,11 +3,6 @@ function f() {
     find . -name "$1"
 }
 
-# cd into whatever is the forefront Finder window.
-cdf() {  # short for cdfinder
-  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
-}
-
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}"
@@ -95,22 +90,11 @@ function killport() {
 	lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9
 }
 
-# Create a data URI from a file and copy it to the pasteboard
-# Credit to https://github.com/necolas/dotfiles/blob/master/bash/functions/datauri
-datauri() {
-    local mimeType=$(file -b --mime-type "$1")
-    if [[ $mimeType == text/* ]]; then
-        mimeType="${mimeType};charset=utf-8"
-    fi
-    printf "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')" | pbcopy | printf "=> data URI copied to pasteboard.\n"
-}
-
 pman () {
     man -t "${1}" | open -f -a /Applications/Preview.app
 }
 
-function command_exists ()
-{
+function command_exists () {
     type "$1" &> /dev/null ;
 }
 
@@ -125,3 +109,8 @@ function gurl() {
 }
 # GitHub URL for current repo, including current branch + path.
 alias gurlp='echo $(gurl)/tree/$(gbs)/$(git rev-parse --show-prefix)'
+
+# output current git branch, echo $(curbr)
+function curbr() {
+  git rev-parse --abbrev-ref HEAD
+}

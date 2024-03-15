@@ -10,20 +10,12 @@ alias cmu='chezmoi update'
 
 # Git
 alias gs='gst'
-# Lovely git log, thx @visionmedia
-alias glog="git log --format='%Cgreen%h%Creset %Cblue%ad%Creset %C(cyan)%an%Creset: %s' --graph --date=short"
-# Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
+
 # open conflicted files in VSCode.
 alias fix='code `git diff --name-only | uniq`'
 
 # Vim
 alias vim='nvim'
-
-# output current git branch, echo $(curbr)
-function curbr() {
-  git rev-parse --abbrev-ref HEAD
-}
 
 ## empty directory of all files and directories, including 
 ## hidden files
@@ -43,10 +35,6 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # File size
 alias fs="stat -f \"%z bytes\""
