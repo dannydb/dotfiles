@@ -13,7 +13,6 @@ packages:
       - 'mas'
       - 'neovim'
       - 'starship'
-      - 'tree-sitter'
       - 'watchman'
       - 'chroma'
     casks:
