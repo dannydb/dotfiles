@@ -16,10 +16,10 @@ Host hassio
 
 Host cloudbox
   ForwardAgent yes
-  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" .onepasswordAccount | trim }}
   User ubuntu
 
-Host {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+Host {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" .onepasswordAccount | trim}}
   ForwardAgent yes
-  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" }}
+  HostName {{ onepasswordRead "op://chezmoi/Cloudbox IP/credential" .onepasswordAccount | trim }}
   User ubuntu

@@ -70,13 +70,13 @@ export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 
 {{- if eq .chezmoi.os "darwin" }}
-export ARTIFACTORY_USER={{ onepasswordRead "op://chezmoi/Artifactory/username" }}
-export ARTIFACTORY_API_KEY={{ onepasswordRead "op://chezmoi/Artifactory/credential" }}
-export ARTIFACTORY_EMAIL={{ onepasswordRead "op://chezmoi/Artifactory/email" }}
+export ARTIFACTORY_USER={{ onepasswordRead "op://chezmoi/Artifactory/username" .onepasswordAccount | trim }}
+export ARTIFACTORY_API_KEY={{ onepasswordRead "op://chezmoi/Artifactory/credential" .onepasswordAccount | trim }}
+export ARTIFACTORY_EMAIL={{ onepasswordRead "op://chezmoi/Artifactory/email" .onepasswordAccount | trim }}
 export ARTIFACTORY_AUTH=$(echo -n "$ARTIFACTORY_USER:$(echo $ARTIFACTORY_API_KEY | base64 -D)" | base64)
 
-export NYT_USER={{ onepasswordRead "op://chezmoi/NYT User/user" }}
-export NYT_EMAIL={{ onepasswordRead "op://chezmoi/NYT User/email" }}
+export NYT_USER={{ onepasswordRead "op://chezmoi/NYT User/user" .onepasswordAccount | trim }}
+export NYT_EMAIL={{ onepasswordRead "op://chezmoi/NYT User/email" .onepasswordAccount | trim }}
 
 export PCO_CLOUDBOX_AFTER_PROVISION_SCRIPT_PATH=$DOTFILES/cloud-box-post-provision.sh
 {{- end }}

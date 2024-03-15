@@ -1,10 +1,10 @@
 {{- $name := promptStringOnce . "name" "Name" -}}
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $onepasswordAccount := promptStringOnce . "onepasswordAccount" "1Password Account" -}}
 
 [data]
     email = {{ $email | quote }}
     name = {{ $name | quote }}
+    onepasswordAccount = {{ $onepasswordAccount | quote }}
 [edit]
     minDuration = 0
-[hooks.apply.post]
-    command = "reload"
