@@ -6,3 +6,5 @@
     name = {{ $name | quote }}
 [edit]
     minDuration = 0
+[hooks.apply.post]
+    command = "reload"
