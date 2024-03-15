@@ -5,6 +5,8 @@ packages:
       - 'neovim'
       - 'starship'
   darwin:
+    taps:
+      - 'homebrew/cask-fonts'
     brews:
       - 'git-lfs'
       - 'mas'
@@ -24,6 +26,7 @@ packages:
       - 'figma'
       - 'flipper'
       - 'font-monaspace'
+      - 'font-monaspace-nerd-font'
       - 'imageoptim'
       - 'istat-menus'
       - 'iterm2'
