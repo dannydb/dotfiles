@@ -47,26 +47,27 @@ packages:
       - 'zoom'
       - 'zulu11'
     mas:
-      - 497799835 # Xcode
-      - 1287239339 # ColorSlurp
       - 1365531024 # 1Blocker
       - 1569813296 # 1Password for Safari
+      - 696977615 # Capo
       - 1290358394 # Cardhop
+      - 993487541 # Carrot Weather
+      - 1287239339 # ColorSlurp
+      - 1081413713 # GIF Brewery 3
       - 506189836 # Harvest
       - 6444602274 # Ivory
       - 1568924476 # Mela
-      - 1592917505 # Noir
       - 1440405750 # MusicHarbor
+      - 1592917505 # Noir
       - 1643649331 # OpenIn
       - 639968404 # Parcel
       - 1444636541 # Photomator
       - 1289583905 # Pixelmator Pro
+      - 1549370672 # Save to Raindrop.io
+      - 1594183810 # Shortery
       - 1606145041 # Sleeve
       - 6445813049 # Spark
       - 904280696 # Things
+      - 497799835 # Xcode
       - 889428659 # xScope
-      - 1594183810 # Shortery
-      - 1549370672 # Save to Raindrop.io
-      - 1081413713 # GIF Brewery 3
-      - 993487541 # Carrot Weather
 
