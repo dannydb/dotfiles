@@ -4,6 +4,8 @@ packages:
       - 'chezmoi'
       - 'neovim'
       - 'starship'
+      - 'chroma'
+      - 'pygments'
   darwin:
     taps:
       - 'homebrew/cask-fonts'
@@ -14,6 +16,8 @@ packages:
       - 'starship'
       - 'tree-sitter'
       - 'watchman'
+      - 'chroma'
+      - 'pygments'
     casks:
       - '1password-cli'
       - '1password'

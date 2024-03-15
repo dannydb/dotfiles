@@ -40,21 +40,21 @@ plugins=(
   pipenv
   rbenv
   ruby
+  starship
   vscode
   zsh-autosuggestions
 )
 
-eval "$(rbenv init - zsh)";
 eval "$($HOME/Code/pco/bin/pco init -)"
-source $HOME/pco-box/env.sh
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/pco-box/env.sh
+. $ZSH/oh-my-zsh.sh
 . $DOTFILES/zsh/aliases.zsh
 . $DOTFILES/zsh/functions.zsh
 
 cdpath=($HOME/Code)
 
-ZSH_COLORIZE_STYLE="monokai"
+ZSH_COLORIZE_STYLE="github-dark"
 
 export TERM=xterm-256color # or screen-256color
 export LANG=en_US.UTF-8
@@ -79,6 +79,3 @@ export NYT_EMAIL={{ onepasswordRead "op://chezmoi/NYT User/email" }}
 
 export PCO_CLOUDBOX_AFTER_PROVISION_SCRIPT_PATH=$DOTFILES/cloud-box-post-provision.sh
 {{- end }}
-
-eval "$(starship init zsh)"
-
