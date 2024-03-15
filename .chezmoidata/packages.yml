@@ -17,7 +17,6 @@ packages:
       - 'tree-sitter'
       - 'watchman'
       - 'chroma'
-      - 'pygments'
     casks:
       - '1password-cli'
       - '1password'
