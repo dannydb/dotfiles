@@ -4,6 +4,7 @@ alias reload='source ~/.zshrc'
 # Chezmoi
 alias cm='chezmoi'
 alias cmcd='chezmoi cd'
+alias cme='chezmoi edit'
 alias cma='chezmoi apply'
 alias cmu='chezmoi update'
 
