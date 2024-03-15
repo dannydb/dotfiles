@@ -1,5 +1,5 @@
 # Reload Library
-alias reload='source ~/.zshrc'
+alias reload='omz reload'
 
 # Chezmoi
 alias cm='chezmoi'
@@ -31,7 +31,7 @@ function curbr() {
 alias empty='find . -name . -o -prune -exec rm -rf -- {} +'
 
 # programs
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+alias hosts='sudo $EDITOR /etc/hosts'
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
@@ -40,9 +40,6 @@ alias lsd='ls -l | grep "^d"'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
-# Enhanced WHOIS lookups
-# alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
@@ -53,9 +50,3 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# Reset bluetooth server
-alias fixbluetooth="sudo killall blued"
-
-# cd to dotfiles and open editor
-alias config="cd ~/Code/dotfiles/ && code ."
