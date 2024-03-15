@@ -26,10 +26,6 @@ PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 export PATH
 
-{{- if eq .chezmoi.os "linux" }}
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)";
-{{- end }}
-
 plugins=(
   asdf
   brew
