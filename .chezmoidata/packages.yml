@@ -5,6 +5,7 @@ packages:
       - 'neovim'
       - 'starship'
       - 'chroma'
+      - 'tldr'
   darwin:
     taps:
       - 'homebrew/cask-fonts'
@@ -15,6 +16,7 @@ packages:
       - 'starship'
       - 'watchman'
       - 'chroma'
+      - 'tldr'
     casks:
       - '1password-cli'
       - '1password'
