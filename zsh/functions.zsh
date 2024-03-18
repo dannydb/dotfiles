@@ -115,6 +115,6 @@ function curbr() {
   git rev-parse --abbrev-ref HEAD
 }
 
-function fix_cloud_box_ssh_agent_forwarding() {
+function fixssh() {
   eval $(tmux show-env -s |grep '^SSH_')
 }
