@@ -42,8 +42,8 @@ plugins=(
   zsh-autosuggestions
 )
 
-source $HOME/pco-box/env.sh
 source $ZSH/oh-my-zsh.sh
+source $HOME/pco-box/env.sh
 eval "$($HOME/Code/pco/bin/pco init -)"
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
