@@ -42,6 +42,7 @@ plugins=(
 )
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+setopt auto_cd
 cdpath=(. $HOME $HOME/Code)
 
 source $ZSH/oh-my-zsh.sh
