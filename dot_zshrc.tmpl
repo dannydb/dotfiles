@@ -64,6 +64,8 @@ export EDITOR="nvim"
 export GIT_EDITOR="nvim"
 
 {{- if eq .chezmoi.os "darwin" }}
+export npm_config_python=/opt/homebrew/bin/python3.11
+
 export ARTIFACTORY_USER={{ onepasswordRead "op://chezmoi/Artifactory/username" .onepasswordAccount | trim }}
 export ARTIFACTORY_API_KEY={{ onepasswordRead "op://chezmoi/Artifactory/credential" .onepasswordAccount | trim }}
 export ARTIFACTORY_EMAIL={{ onepasswordRead "op://chezmoi/Artifactory/email" .onepasswordAccount | trim }}
