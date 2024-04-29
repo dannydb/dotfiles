@@ -38,3 +38,5 @@ alias flush="dscacheutil -flushcache"
 
 # File size
 alias fs="stat -f \"%z bytes\""
+
+alias cloudbox-up="$HOME/Code/pco/bin/pco cloud-box up --tmux-iterm"

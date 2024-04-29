@@ -9,6 +9,7 @@ packages:
   darwin:
     taps:
       - 'homebrew/cask-fonts'
+      - 'homebrew/cask-versions'
     brews:
       - 'git-lfs'
       - 'mas'
@@ -39,6 +40,7 @@ packages:
       - 'rapidapi'
       - 'raycast'
       - 'reader'
+      - 'safari-technology-preview'
       - 'slack'
       - 'soundsource'
       - 'tableplus'
