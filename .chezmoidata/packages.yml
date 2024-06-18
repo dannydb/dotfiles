@@ -25,6 +25,7 @@ packages:
       - 'arc'
       - 'asana'
       - 'bartender'
+      - 'bettertouchtool'
       - 'dash'
       - 'fantastical'
       - 'figma'
