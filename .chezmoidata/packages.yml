@@ -7,9 +7,6 @@ packages:
       - 'chroma'
       - 'tldr'
   darwin:
-    taps:
-      - 'homebrew/cask-fonts'
-      - 'homebrew/cask-versions'
     brews:
       - 'git-lfs'
       - 'mas'

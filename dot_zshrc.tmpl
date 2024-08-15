@@ -68,6 +68,10 @@ export GIT_EDITOR="nvim"
 
 {{- if eq .chezmoi.os "darwin" }}
 export npm_config_python=/opt/homebrew/bin/python3.11
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export ARTIFACTORY_USER={{ onepasswordRead "op://chezmoi/Artifactory/username" .onepasswordAccount | trim }}
 export ARTIFACTORY_API_KEY={{ onepasswordRead "op://chezmoi/Artifactory/credential" .onepasswordAccount | trim }}
