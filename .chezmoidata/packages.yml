@@ -46,7 +46,7 @@ packages:
       - 'tuple'
       - 'visual-studio-code'
       - 'zoom'
-      - 'zulu11'
+      - 'zulu@11'
     mas:
       - 1365531024 # 1Blocker
       - 1569813296 # 1Password for Safari
