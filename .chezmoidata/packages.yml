@@ -15,6 +15,7 @@ packages:
       - 'watchman'
       - 'chroma'
       - 'tldr'
+      - 'switchaudio-osx'
     casks:
       - '1password-cli'
       - '1password'
@@ -40,7 +41,6 @@ packages:
       - 'reader'
       - 'safari-technology-preview'
       - 'slack'
-      - 'soundsource'
       - 'tableplus'
       - 'trailer'
       - 'tuple'
