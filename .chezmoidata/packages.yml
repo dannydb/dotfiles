@@ -6,6 +6,7 @@ packages:
       - 'starship'
       - 'chroma'
       - 'tldr'
+      - 'direnv'
   darwin:
     brews:
       - 'git-lfs'
@@ -16,6 +17,7 @@ packages:
       - 'chroma'
       - 'tldr'
       - 'switchaudio-osx'
+      - 'direnv'
     casks:
       - '1password-cli'
       - '1password'
