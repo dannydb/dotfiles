@@ -41,7 +41,9 @@ plugins=(
   zsh-autosuggestions
 )
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# Load brew completions
+autoload -Uz compinit
+compinit
 
 setopt auto_cd
 cdpath=(. $HOME $HOME/Code)
