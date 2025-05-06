@@ -11,6 +11,8 @@ alias cmu='chezmoi update'
 # Git
 alias gs='gst'
 
+alias gcs='gh copilot suggest'
+
 # open conflicted files in VSCode.
 alias fix='code `git diff --name-only | uniq`'
 
