@@ -69,6 +69,8 @@ export EDITOR="nvim"
 {{- end }}
 export GIT_EDITOR="nvim"
 
+export REACT_TERMINAL=warp
+
 {{- if eq .chezmoi.os "darwin" }}
 export npm_config_python=/opt/homebrew/bin/python3.11
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
