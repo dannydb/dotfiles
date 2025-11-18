@@ -1,4 +1,4 @@
-PATH=/usr/local/bin
+PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/local/share/npm/bin
 PATH=$PATH:/usr/local/bin/node_modules/.bin
@@ -87,6 +87,16 @@ export NYT_EMAIL={{ onepasswordRead "op://chezmoi/NYT User/email" .onepasswordAc
 
 export PCO_CLOUDBOX_AFTER_PROVISION_SCRIPT_PATH={{ .chezmoi.sourceDir }}/cloud-box-post-provision.sh
 {{- end }}
+
+
+# pnpm
+export PNPM_HOME="/Users/dannydb/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 
 {{ template "aliases.zsh" . }}
 {{ template "functions.zsh" . }}

@@ -42,3 +42,6 @@ alias flush="dscacheutil -flushcache"
 alias fs="stat -f \"%z bytes\""
 
 alias cloudbox-up="$HOME/Code/pco/bin/pco cloud-box up --tmux-iterm"
+
+# Aliases from the nytg-cli (v1 @ 2025-05-17T20:05:29.504Z)
+alias pn="pnpm"
