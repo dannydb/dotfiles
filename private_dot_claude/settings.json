@@ -1,0 +1,19 @@
+{
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "Notion@claude-plugins-official": true,
+    "slack@claude-plugins-official": true,
+    "coding-standards@planning-center": true,
+    "pr-review@planning-center": true,
+    "propose-pr@planning-center": true,
+    "ux-engineer@planning-center": true,
+    "asana@claude-plugins-official": true
+  }
+}
