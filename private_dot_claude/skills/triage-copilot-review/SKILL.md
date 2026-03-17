@@ -50,7 +50,13 @@ For each comment from Copilot:
    - Give your assessment: agree, disagree, or partially agree
    - If you agree, propose a specific fix
    - If you disagree, explain why
-4. **Wait for the user's decision** before proceeding.
+4. **Use the `AskUserQuestion` tool** to present the decision as buttons:
+   - Question: "What would you like to do with this comment?"
+   - Header: "Action"
+   - Options:
+     - **Address it** — "Make the suggested change, commit, and resolve the thread"
+     - **Ignore it** — "Reply 'No action needed' and resolve the thread"
+     - **Skip for now** — "Leave this comment for later and move to the next one"
 
 ### Step 3: Act on the user's decision
 
