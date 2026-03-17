@@ -11,9 +11,16 @@
     "Notion@claude-plugins-official": true,
     "slack@claude-plugins-official": true,
     "coding-standards@planning-center": true,
-    "pr-review@planning-center": true,
-    "propose-pr@planning-center": true,
-    "ux-engineer@planning-center": true,
-    "asana@claude-plugins-official": true
+    "asana@claude-plugins-official": true,
+    "doxy@planning-center": true,
+    "github-setup@planning-center": true,
+    "pco-box@planning-center": true,
+    "pr@planning-center": true,
+    "research-pco-products@planning-center": true,
+    "screenshot-compare@planning-center": true,
+    "tapestry@planning-center": true,
+    "dev-tools@planning-center": true,
+    "redshift-mcp@planning-center": true,
+    "superpowers@claude-plugins-official": true
   }
 }
