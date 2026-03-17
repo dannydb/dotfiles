@@ -1,0 +1,44 @@
+# Font
+font-family = MonaspiceNe Nerd Font Mono
+font-size = 13
+adjust-cell-height = 20%
+
+# Synthwave '84 colors
+background = #252335
+foreground = #ffffff
+cursor-color = #f97e72
+cursor-text = #262335
+selection-background = #6b3fa0
+selection-foreground = #ffffff
+
+# Black
+palette = 0=#2a2139
+palette = 8=#495495
+
+# Red
+palette = 1=#fe4450
+palette = 9=#fe4450
+
+# Green
+palette = 2=#72f1b8
+palette = 10=#72f1b8
+
+# Yellow
+palette = 3=#f3e877
+palette = 11=#fede5d
+
+# Blue
+palette = 4=#03edf9
+palette = 12=#03edf9
+
+# Magenta
+palette = 5=#ff7edb
+palette = 13=#ff7edb
+
+# Cyan
+palette = 6=#03edf9
+palette = 14=#03edf9
+
+# White
+palette = 7=#ffffff
+palette = 15=#ffffff
