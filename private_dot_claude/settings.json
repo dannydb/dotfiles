@@ -1,4 +1,17 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(gh pr:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(open \"https://github.com/planningcenter/doxy/compare/main...dd/chore/update-alias-tokens?expand=1&title=chore%28tokens%29%3A%20add%20new%20semantic%20tokens%20for%20buttons%2C%20borders%2C%20and%20states&body=%23%23%23%20What%0A-%20Added%20%60border-color%60%20tokens%3A%20%60--d-border-color%60%2C%20%60--d-border-color-dark%60%2C%20%60--d-border-color-dim%60%2C%20%60--d-border-color-status-warning%60%0A-%20Added%20%60fill-color%60%20button%20tokens%20for%20interaction%20and%20delete%20variants%20%28outline%2C%20solid%2C%20disabled%20states%29%0A-%20Added%20%60icon-color%60%20tokens%20for%20interaction%20and%20button%20disabled/error%20states%0A-%20Added%20%60text-color%60%20tokens%20for%20interaction%20and%20button%20interaction%20disabled/error%20states%0A-%20Fixed%20%60--d-text-color-placeholder%60%20value%20from%20%60neutral-88%60%20to%20%60neutral-58%60%0A%0A%23%23%23%20Why%0A-%20Provide%20design%20tokens%20needed%20for%20button%20components%20%28delete%20and%20interaction%20variants%29%20across%20their%20full%20range%20of%20states%20%28default%2C%20disabled%2C%20error%29%0A-%20Standardize%20border%20color%20usage%20with%20semantic%20tokens%20for%20common%20patterns%0A-%20Correct%20placeholder%20text%20color%20for%20better%20legibility/contrast%0A%0A%23%23%23%20How%0A-%20Added%20token%20definitions%20to%20%60src/json/alias.json%60%20following%20the%20existing%20light/dark%20mode%20extension%20pattern%0A-%20Regenerated%20all%20build%20outputs%20%28CSS%2C%20TypeScript%2C%20React%20Native%29%20via%20the%20Style%20Dictionary%20pipeline%0A%0A%23%23%23%20Things%20to%20note%0A-%20All%20new%20tokens%20%E2%80%94%20no%20breaking%20changes%0A-%20%60--d-text-color-placeholder%60%20value%20change%20%28neutral-88%20%E2%86%92%20neutral-58%29%20may%20affect%20existing%20usages%20visually%0A%0A%23%23%23%20Preview%0AN/A%0A\")",
+      "Bash(git reset:*)",
+      "Bash(git cherry-pick:*)"
+    ]
+  },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
     "github@claude-plugins-official": true,
