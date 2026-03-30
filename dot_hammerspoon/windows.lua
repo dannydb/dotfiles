@@ -190,7 +190,7 @@ end
 
 function codeLayout()
   hs.layout.apply({
-    { "Code",    nil, screen, hs.layout.left50, nil, nil },
-    { "Arc",   nil, screen, hs.layout.right50, nil, nil },
+    { "Code", nil, screen, hs.layout.left50,  nil, nil },
+    { "Arc",  nil, screen, hs.layout.right50, nil, nil },
   })
 end
