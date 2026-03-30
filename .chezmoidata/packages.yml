@@ -35,6 +35,7 @@ packages:
       - 'flipper'
       - 'font-monaspace'
       - 'font-monaspice-nerd-font'
+      - 'hammerspoon'
       - 'imageoptim'
       # - 'istat-menus' - setapp
       - 'iterm2'
