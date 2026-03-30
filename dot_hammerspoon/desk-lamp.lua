@@ -11,14 +11,16 @@ local function deskLamp(on)
   end
 end
 
-hs.screen.watcher.new(function()
+screenWatcher = hs.screen.watcher.new(function()
   deskLamp(hasStudioDisplay())
-end):start()
+end)
+screenWatcher:start()
 
-hs.caffeinate.watcher.new(function(event)
+caffeinateWatcher = hs.caffeinate.watcher.new(function(event)
   if event == hs.caffeinate.watcher.systemWillSleep then
     deskLamp(false)
   elseif event == hs.caffeinate.watcher.systemDidWake then
     deskLamp(true)
   end
-end):start()
+end)
+caffeinateWatcher:start()

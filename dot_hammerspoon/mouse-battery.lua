@@ -4,4 +4,5 @@ local function sleepWatcherCallback(event)
   end
 end
 
-hs.caffeinate.watcher.new(sleepWatcherCallback):start()
+mouseBatteryCaffeinateWatcher = hs.caffeinate.watcher.new(sleepWatcherCallback)
+mouseBatteryCaffeinateWatcher:start()
