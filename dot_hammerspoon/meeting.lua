@@ -19,8 +19,13 @@ local function hasUniversalAudio()
   return false
 end
 
-local function switchAudioSource(typeFlag, name)
-  hs.execute(string.format('/opt/homebrew/bin/SwitchAudioSource -t %s -s "%s"', typeFlag, name))
+local function setDefaultDevice(name, findFn, setFn)
+  for _, device in ipairs(findFn()) do
+    if device:name() == name then
+      device[setFn](device)
+      return
+    end
+  end
 end
 
 -- Camera watcher
@@ -32,12 +37,20 @@ for _, c in ipairs(hs.camera.allCameras()) do
   end
 end
 
+lightsOffTimer = nil
+
 if studioDisplayCamera then
   studioDisplayCamera:setPropertyWatcherCallback(function(cam)
     if cam:isInUse() and hasUniversalAudio() then
+      if lightsOffTimer then lightsOffTimer:stop() end
       hs.shortcuts.run("Turn on meeting lights")
     elseif not isAirPodsConnected() then
-      hs.shortcuts.run("Turn off meeting lights")
+      if lightsOffTimer then lightsOffTimer:stop() end
+      lightsOffTimer = hs.timer.doAfter(5, function()
+        if not cam:isInUse() then
+          hs.shortcuts.run("Turn off meeting lights")
+        end
+      end)
     end
   end)
   studioDisplayCamera:startPropertyWatcher()
@@ -52,8 +65,8 @@ local function audioDeviceCallback(event)
   local connected = isAirPodsConnected()
 
   if connected and not previouslyConnected then
-    switchAudioSource("input", "Universal Audio Thunderbolt")
-    switchAudioSource("output", "Danny’s AirPods Pro")
+    setDefaultDevice("Universal Audio Thunderbolt", hs.audiodevice.allInputDevices, "setDefaultInputDevice")
+    setDefaultDevice("Danny’s AirPods Pro", hs.audiodevice.allOutputDevices, "setDefaultOutputDevice")
     if hasUniversalAudio() then
       hs.shortcuts.run("Turn on meeting lights")
     end
