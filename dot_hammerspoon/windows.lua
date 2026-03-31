@@ -13,27 +13,23 @@ local function approxEqual(a, b)
   return math.abs(a - b) < TOLERANCE
 end
 
-local function matchesPosition(win, screen, x, y, w, h)
+local function matchesRect(win, screen, x, y, w, h)
   local f = win:frame()
   return approxEqual(f.x, screen.x + x * screen.w)
     and approxEqual(f.y, screen.y + y * screen.h)
+    and approxEqual(f.w, w * screen.w)
     and approxEqual(f.h, h * screen.h)
 end
 
-local function cycleSizeForDirection(win, direction, xFn, y, h)
+local function cycleSizeForDirection(win, direction, rectFn)
   local screen = win:screen():frame()
-  local key = win:id() .. direction
 
   for i, size in ipairs(cycleSizes) do
-    if matchesPosition(win, screen, xFn(size), y, size, h)
-       or matchesPosition(win, screen, xFn(size), y, h, size) then
-      local next = (i % #cycleSizes) + 1
-      cycleState[key] = next
-      return cycleSizes[next]
+    if matchesRect(win, screen, rectFn(size)) then
+      return cycleSizes[(i % #cycleSizes) + 1]
     end
   end
 
-  cycleState[key] = 1
   return cycleSizes[1]
 end
 
@@ -66,28 +62,28 @@ end
 hs.hotkey.bind(mods, "left", function()
   local win = hs.window.focusedWindow()
   if not win then return end
-  local w = cycleSizeForDirection(win, "left", function() return 0 end, 0, 1)
+  local w = cycleSizeForDirection(win, "left", function(s) return 0, 0, s, 1 end)
   move(win, 0, 0, w, 1)
 end)
 
 hs.hotkey.bind(mods, "right", function()
   local win = hs.window.focusedWindow()
   if not win then return end
-  local w = cycleSizeForDirection(win, "right", function(s) return 1 - s end, 0, 1)
+  local w = cycleSizeForDirection(win, "right", function(s) return 1-s, 0, s, 1 end)
   move(win, 1 - w, 0, w, 1)
 end)
 
 hs.hotkey.bind(mods, "up", function()
   local win = hs.window.focusedWindow()
   if not win then return end
-  local h = cycleSizeForDirection(win, "up", function() return 0 end, 0, 1)
+  local h = cycleSizeForDirection(win, "up", function(s) return 0, 0, 1, s end)
   move(win, 0, 0, 1, h)
 end)
 
 hs.hotkey.bind(mods, "down", function()
   local win = hs.window.focusedWindow()
   if not win then return end
-  local h = cycleSizeForDirection(win, "down", function() return 0 end, 0, 1)
+  local h = cycleSizeForDirection(win, "down", function(s) return 0, 1-s, 1, s end)
   move(win, 0, 1 - h, 1, h)
 end)
 
@@ -190,7 +186,8 @@ end
 
 function codeLayout()
   hs.layout.apply({
-    { "Code", nil, screen, hs.layout.left50,  nil, nil },
-    { "Arc",  nil, screen, hs.layout.right50, nil, nil },
+    { "Code",   nil, screen, hs.layout.left50,  nil, nil },
+    { "Claude", nil, screen, hs.layout.right50, nil, nil },
+    { "Arc",    nil, screen, hs.layout.right50, nil, nil },
   })
 end
