@@ -1,3 +1,9 @@
+hs.alert.defaultStyle.strokeWidth = 0
+hs.alert.defaultStyle.strokeColor = {red = 0, green = 0, blue = 0, alpha = 0.8}
+hs.alert.defaultStyle.fillColor = {red = 0, green = 0, blue = 0, alpha = 0.8}
+hs.alert.defaultStyle.radius = 12
+hs.alert.defaultStyle.textSize = 14
+
 -- Remap volume and mute keys to cmd+fn+f10/f11/f12 when Universal Audio is the output device
 local function isUniversalAudioOutput()
   local device = hs.audiodevice.defaultOutputDevice()
@@ -24,6 +30,22 @@ mediaKeyTap = hs.eventtap.new({hs.eventtap.event.types.systemDefined}, function(
   return false
 end)
 mediaKeyTap:start()
+
+hs.hotkey.bind({"cmd"}, "f15", function()
+  local current = hs.audiodevice.defaultOutputDevice()
+  local targets = {"Universal Audio Thunderbolt", "HELIX Audio"}
+  local next = targets[1]
+  if current and current:name() == targets[1] then
+    next = targets[2]
+  end
+  for _, device in ipairs(hs.audiodevice.allOutputDevices()) do
+    if device:name() == next then
+      device:setDefaultOutputDevice()
+      hs.alert.show("🔈 Output: " .. next)
+      return
+    end
+  end
+end)
 
 hs.hotkey.bind({}, "f18", function()
   local zoom = hs.application.get("zoom.us")
@@ -56,4 +78,12 @@ hs.hotkey.bind({}, "f19", function()
       hs.eventtap.keyStroke({"cmd", "ctrl"}, "q")
     end)
   end
+end)
+
+hs.hotkey.bind({"ctrl", "alt"}, "home", function()
+  hs.execute("open -a ScreenSaverEngine")
+end)
+
+hs.hotkey.bind({"ctrl", "alt"}, "end", function()
+  hs.caffeinate.systemSleep()
 end)
