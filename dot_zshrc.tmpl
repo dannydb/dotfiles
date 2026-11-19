@@ -31,7 +31,7 @@ plugins=(
   git
   macos
   npm
-  pipenv
+  nvm
   ruby
   starship
   vscode
@@ -77,6 +77,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export GITHUB_PERSONAL_ACCESS_TOKEN="$(gh auth token)"
 
 export ARTIFACTORY_USER={{ onepasswordRead "op://chezmoi/Artifactory/username" .onepasswordAccount | trim }}
 export ARTIFACTORY_API_KEY={{ onepasswordRead "op://chezmoi/Artifactory/credential" .onepasswordAccount | trim }}
@@ -100,5 +101,23 @@ esac
 # pnpm end
 
 
+autoload -Uz add-zsh-hook
+
+function set_npm_userconfig() {
+  case "$PWD" in
+    "$HOME/Code/nyt-projects"/*|"$HOME/Code/nyt-projects")
+      export NPM_CONFIG_USERCONFIG="$HOME/Code/nyt-projects/.npmrc"
+      ;;
+    *)
+      unset NPM_CONFIG_USERCONFIG
+      ;;
+  esac
+}
+
+add-zsh-hook chpwd set_npm_userconfig
+set_npm_userconfig
+
 {{ template "aliases.zsh" . }}
 {{ template "functions.zsh" . }}
+
+[ -s "$HOME/.local/bin/.bk_shell_hook.sh" ] && source "$HOME/.local/bin/.bk_shell_hook.sh"

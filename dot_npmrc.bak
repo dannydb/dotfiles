@@ -1,0 +1,6 @@
+//npm.pkg.github.com/:_authToken=${PCO_GITHUB_PACKAGE_TOKEN}
+registry=https://npm-registry.pco.dev/d5b24770c02b59cf8fc567115d5c5817a8184706eb7caa1a40c8dd546f949af7/
+@newsdev:registry=https://nytimes.jfrog.io/artifactory/api/npm/npm-virtual/
+@nyt:registry=https://nytimes.jfrog.io/artifactory/api/npm/npm-virtual/
+//npm.pkg.github.com/:_authToken=${PCO_GITHUB_PACKAGE_TOKEN}
+//nytimes.jfrog.io/artifactory/api/npm/npm-virtual/:_authToken=${ARTIFACTORY_ACCESS_TOKEN}

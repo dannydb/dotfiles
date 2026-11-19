@@ -3,6 +3,9 @@ font-family = MonaspiceNe Nerd Font Mono
 font-size = 13
 adjust-cell-height = 20%
 
+# Panes
+window-padding-x = 5
+
 # Synthwave '84 colors
 background = #252335
 foreground = #ffffff
