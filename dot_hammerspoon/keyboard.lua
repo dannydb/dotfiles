@@ -51,7 +51,7 @@ hs.hotkey.bind({}, "f18", function()
   local zoom = hs.application.get("zoom.us")
   local meetingWin = zoom and zoom:findWindow("Zoom Meeting")
   if meetingWin then
-    hs.eventtap.keyStroke({"cmd", "shift"}, "a")
+    hs.eventtap.keyStroke({"cmd", "shift"}, "a", 0, zoom)
   elseif hs.application.get("Tuple") and #hs.application.get("Tuple"):visibleWindows() > 0 then
     hs.eventtap.keyStroke({"cmd", "ctrl"}, "a")
   end
@@ -61,22 +61,33 @@ hs.hotkey.bind({}, "f19", function()
   local zoom = hs.application.get("zoom.us")
   local meetingWin = zoom and zoom:findWindow("Zoom Meeting")
   if meetingWin then
-    meetingWin:focus()
-    hs.osascript.applescript([[
-      tell application "System Events"
-      tell process "zoom.us"
-          keystroke "w" using {command down}
-          delay 0.5
-          key code 36
-      end tell
-    end tell
-  ]])
-  elseif hs.application.get("Tuple") and #hs.application.get("Tuple"):visibleWindows() > 0 then
-    local tuple = hs.application.get("Tuple")
-    tuple:activate()
+    hs.eventtap.keyStroke({"cmd"}, "w", 0, zoom)
     hs.timer.doAfter(0.5, function()
-      hs.eventtap.keyStroke({"cmd", "ctrl"}, "q")
+      hs.eventtap.keyStroke({}, "return", 0, zoom)
     end)
+  elseif hs.application.get("Tuple") and #hs.application.get("Tuple"):visibleWindows() > 0 then
+    hs.eventtap.keyStroke({"cmd", "ctrl"}, "q", 0, hs.application.get("Tuple"))
+  end
+end)
+
+local hyper = {"ctrl", "alt", "shift"}
+
+hs.hotkey.bind(hyper, ";", function() hs.application.launchOrFocus("Dia") end)
+hs.hotkey.bind(hyper, "a", function() hs.application.launchOrFocus("Asana") end)
+hs.hotkey.bind(hyper, "c", function() hs.application.launchOrFocus("Claude") end)
+hs.hotkey.bind(hyper, "l", function() hs.application.launchOrFocus("Linear") end)
+hs.hotkey.bind(hyper, "b", function() hs.application.launchOrFocusByBundleID("io.raindrop.macapp") end)
+hs.hotkey.bind(hyper, "r", function() hs.application.launchOrFocus("Reader") end)
+hs.hotkey.bind(hyper, "k", function() hs.application.launchOrFocus("Slack") end)
+hs.hotkey.bind(hyper, "'", function() hs.application.launchOrFocus("Visual Studio Code") end)
+local previousApp = nil
+hs.hotkey.bind({"ctrl"}, "`", function()
+  local front = hs.application.frontmostApplication()
+  if front and front:name() == "cmux" then
+    if previousApp and previousApp:isRunning() then previousApp:activate() end
+  else
+    previousApp = front
+    hs.application.launchOrFocus("cmux")
   end
 end)
 

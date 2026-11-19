@@ -60,6 +60,13 @@ end
 local previouslyConnected = isAirPodsConnected()
 
 local function audioDeviceCallback(event)
+  if event == "dIn " then
+    if isAirPodsConnected() and hasUniversalAudio()
+        and hs.audiodevice.defaultInputDevice():name() == "Danny’s AirPods Pro" then
+      setDefaultDevice("Universal Audio Thunderbolt", hs.audiodevice.allInputDevices, "setDefaultInputDevice")
+    end
+    return
+  end
   if event ~= "dev#" then return end
 
   local connected = isAirPodsConnected()
